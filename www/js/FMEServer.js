@@ -81,13 +81,30 @@ function getParams(repository, wrkspName, callback){
 FMEServer.prototype.getSessionID = getSessionID;
 function getSessionID(repository, wrkspName, callback){
 	//returns null if there is an error
-	var url = 'http://'+this.svrHost + '/fmedataupload/' + repository + '/' + wrkspName + '?opt_extractarchive=false&opt_pathlevel=3&opt_fullpath=true';
+	var url = 'http://'+this.svrHost + ':' + this.svrPort + '/fmedataupload/' + repository + '/' + wrkspName + '?opt_extractarchive=false&opt_pathlevel=3&opt_fullpath=true';
 	var sessionID = null;
 	
 	_ajax(url, function(json) {
 		callback(json.serviceResponse.session);
 	});
 	
+}
+
+/**
+ * Transacts a workspace on the server, and returns the response to
+ * the provided callback function.
+ * @param {String} repo The repository the workspace is in
+ * @param {String} workspace The workspace name ending in .fmw
+ * @param {Function} callback Callback function accepting job success as boolean
+ */
+FMEServer.prototype.transactWorkspace = transactWorkspace;
+function transactWorkspace(repo, workspace, callback) {
+	var url = 'http://' + this.svrHost + ':' + this.svrPort +
+		'/fmerest/v2/transformations/commands/transact/' + repo + '/' +
+		workspace + '?detail=low&token=' + this.token;
+	_ajax(url, function(result) {
+		callback(result.status == "SUCCESS" ? true : false);
+	});
 }
 
 /**
