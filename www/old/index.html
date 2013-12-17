@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Realtime Display</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#map_canvas {
+				height: 600px;
+			}
+			dt {
+				padding-top:18px;
+				padding-bottom: 5px;
+			}
+			
+		</style>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="../global_var.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="http://js.pusher.com/1.11/pusher.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+						
+			var polygonArray = [];
+			var map;
+			var features = 0;
+
+			// Pusher app key
+			// PARAMETER
+			var pusher = new Pusher('eb28a88582cbfd79aea5');
+			// Pusher channel
+			var channel = pusher.subscribe('lobby');
+			
+			// Listen for specific events on the channel and parse the message
+			channel.bind('message', function(data) {
+				var jsonFeature = jQuery.parseJSON(data);
+				features++;
+				document.getElementById('numFeat').textContent = features;
+				
+				// Parse geometry and add to map
+				switch(jsonFeature.type) {
+					case 'i':
+
+						var polyCoords = [];
+
+						var coords = jsonFeature.features[0].coordinates;
+
+						for(var j = 0; j < coords.length; j++) {
+
+							var lng = coords[j][0];
+							var lat = coords[j][1];
+
+							polyCoords.push(new google.maps.LatLng(lat, lng));
+						}
+
+						var poly = new google.maps.Polyline({
+							path : polyCoords,
+							strokeColor : "#FF0000",
+							strokeOpacity : 0.8,
+							strokeWeight : 2,
+							fillColor : "#FF0000",
+							fillOpacity : 0.35
+						});
+
+						poly.setMap(map);
+						polygonArray.push(poly);
+						break;
+					case 'u':
+					
+						//remove item from map
+						if(polygonArray) {
+							for(i in polygonArray) {
+								if(parseInt(polyId) === parseInt(polygonArray[i].id)) {
+									polygonArray[i].setMap(null);
+									polygonArray.splice(i, 1);
+								}
+
+							}
+						}
+						
+						
+						var polyCoords = [];
+
+						var coords = jsonFeature.features[0].coordinates[0];
+
+						for(var j = 0; j < coords.length; j++) {
+
+							var lng = coords[j][0];
+							var lat = coords[j][1];
+
+							polyCoords.push(new google.maps.LatLng(lat, lng));
+						}
+
+						var poly = new google.maps.Polygon({
+							paths : polyCoords,
+							id : jsonFeature.id,
+							strokeColor : "#FF0000",
+							strokeOpacity : 0.8,
+							strokeWeight : 2,
+							fillColor : "#FF0000",
+							fillOpacity : 0.35
+						});
+
+						poly.setMap(map);
+						polygonArray.push(poly);
+						break;
+					case 'd':
+						//remove item from map
+						if(polygonArray) {
+							for(i in polygonArray) {
+								if(parseInt(polyId) === parseInt(polygonArray[i].id)) {
+									polygonArray[i].setMap(null);
+									polygonArray.splice(i, 1);
+								}
+
+							}
+						}
+						break;
+					default:
+
+				}
+
+			});
+			
+			// Initialize the map
+			function initialize() {
+				var myOptions = {
+					center : new google.maps.LatLng(30.302793482150715, -97.65678371362306),
+					zoom : 15,
+					mapTypeId : google.maps.MapTypeId.ROADMAP
+				};
+				map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+			}
+			
+			// Function to send a XML HTTP request
+			function createXMLHttpRequest() {
+				try {
+					return new XMLHttpRequest();
+				} catch (e) {
+				}
+				try {
+					return new ActiveXObject("Msxml2.XMLHTTP");
+				} catch (e) {
+				}
+				alert("XMLHttpRequest not supported");
+				return null;
+			}
+			
+			function onResponse() {
+				document.getElementById('dbstatus').setAttribute("class","label label-success");
+				document.getElementById('dbstatus').textContent = "Database ready";
+			}
+			
+			// This function calls the workspace to reset the database
+			function deleteDb() {
+				document.getElementById('dbstatus').setAttribute("class","label label-warning");
+				document.getElementById('dbstatus').textContent = "Waiting for answer...";
+				
+				var xhReq = createXMLHttpRequest();
+				pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/fmepedia_demos/D001 - ResetOracleTable.fmw"
+				pHttpMethod = "GET"
+				xhReq.open(pHttpMethod, pUrlBase, true);
+				xhReq.onreadystatechange = onResponse;
+				xhReq.send(null);
+			}
+			
+			// Listener for initialize function
+			google.maps.event.addDomListener(window, 'load', initialize);
+		
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class"row">
+				<div class="page_header">
+					<h1>Realtime Display <small>Send CAD data by email and watch it appear in realtime</small></h1>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4">
+					<h3>User manual</h3>
+					<dl>
+						<dt>1. Prepare database <span id="dbstatus" class="label label-important">Database not ready</span></dt>
+						<dd>
+							<button class="btn btn-primary" onclick="javascript: deleteDb();">Delete data</button>
+						</dd>
+						<dt>2. Download example data</dt>
+						<dd><a target="_blank" href='download/distribution_N25_good.dwg'>distribution_N25_good.dwg</a></dd>
+						<dd><a target="_blank" href='download/distribution_N25_bad.dwg'>distribution_N25_bad.dwg</a></dd>
+						<dt>3. Send file to FMEServer</dt>
+						<dd>
+							<script type="text/javascript">
+								document.write('<a href="mailto:cad_waterqa@' + fmeserverurl +'" target="_blank"> cad_waterqa@' + fmeserverurl +'</a>');
+							</script>
+						</dd>
+						<dt>4. Wait and see</dt>
+						<dd>Number of Features received: <span class="badge" id='numFeat'>0</span></dd>
+					</dl>
+				</div>
+				<div class="span8">
+					<div id="map_canvas"></div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
