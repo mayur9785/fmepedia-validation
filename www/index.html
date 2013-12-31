@@ -109,15 +109,31 @@
 		var map;
 		var features = 0;
 		
-		// Pusher app key
-		// PARAMETER
-		var pusher = new Pusher('eb28a88582cbfd79aea5');
-		// Pusher channel
-		var channel = pusher.subscribe('lobby');
+		/*** FME Server WebSocket initialization ***/
+		var conn = new WebSocket('ws://jabba:7078/websocket');
 		
-		// Listen for specific events on the channel and parse the message
-		channel.bind('message', function(data) {
-			var jsonFeature = jQuery.parseJSON(data);
+		var connmsg = null;
+		
+		/*** connect to server output stream ***/
+		conn.onopen = function() {
+			connmsg = '{ ws_op : "open", ws_stream_id : "cadqa" }';
+			conn.send(connmsg);
+		}
+		
+		/*** Initialize the map ***/
+
+		var myOptions = {
+			center : new google.maps.LatLng(30.302793482150715, -97.65678371362306),
+			zoom : 15,
+			mapTypeId : google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+		
+		
+		/*** Reacting to incoming messages on WebSocket ***/
+		conn.onmessage = function(event) {
+		
+			var jsonFeature = JSON.parse(event.data);
 			features++;
 			document.getElementById('numFeat').textContent = features;
 			
@@ -203,20 +219,8 @@
 				default:
 
 			}
-
-		});
+		}
 		
-		// Initialize the map
-
-		var myOptions = {
-			center : new google.maps.LatLng(30.302793482150715, -97.65678371362306),
-			zoom : 15,
-			mapTypeId : google.maps.MapTypeId.ROADMAP
-		};
-		map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-
-	
-	
 	}
 	
 	// Function to send a XML HTTP request

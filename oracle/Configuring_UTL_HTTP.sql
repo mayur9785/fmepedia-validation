@@ -9,7 +9,7 @@ begin
   dbms_network_acl_admin.create_acl (
     acl         => 'utl_http.xml',
     description => 'Allow Network requests',
-    principal   => 'SYSTEM',
+    principal   => 'SUPPORT',
     is_grant    => TRUE,
     privilege   => 'connect'
     );
@@ -21,7 +21,7 @@ end;
 begin
   dbms_network_acl_admin.add_privilege (
   acl       => 'utl_http.xml',
-  principal => 'SYSTEM',
+  principal => 'SUPPORT',
   is_grant  => TRUE,
   privilege => 'resolve'
   );
@@ -59,8 +59,18 @@ begin
 end;
 /
 
+-- Assign ACL for jabba address.
+begin
+  dbms_network_acl_admin.assign_acl(
+  acl  => 'utl_http.xml',
+  host => 'jabba'
+  );
+  commit;
+end;
+/
+
 --Grant ACCESS to to necessary user.
 -- GRANT REQUIRED FOR USER 
-GRANT EXECUTE ON UTL_HTTP TO SYSTEM;
+GRANT EXECUTE ON UTL_HTTP TO SUPPORT;
 
 

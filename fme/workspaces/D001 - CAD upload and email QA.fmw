@@ -6,12 +6,12 @@
 #    
 #    
 #    C:\apps\FME_14222\fme.exe "C:\safegit\fmepedia-validation\fme\workspaces\D001 - CAD upload and email QA.fmw"
-#          --SourceDataset_TEXTLINE C:\tmp\email_json_content.txt
+#          --SourceDataset_TEXTLINE C:\safegit\fmepedia-validation\fme\data\email_content.json
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="318 -828"
+#! VIEW_POSITION="2319 -1314"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -29,13 +29,13 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID=""
+#! FME_DOCUMENT_PRIORGUID="8b9002ba-fe9c-47df-829a-081674553c49"
 #! DOC_TOP_LEFT="0 -2968"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-12-30T11:38:43"
+#! LAST_SAVE_DATE="2013-12-31T11:37:53"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -46,7 +46,7 @@
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="6300 2813"
-#! FME_DOCUMENT_GUID="8b9002ba-fe9c-47df-829a-081674553c49"
+#! FME_DOCUMENT_GUID="319e8836-8c18-4ab4-ba7f-b5975d7b0b5b"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -102,7 +102,7 @@
 #! ATTR_INDEX_TYPES=""
 #! ATTR_NAME_INVALID_CHARS=". #[]()?*&apos;&amp;+\/{}"
 #! SUPPORTS_FEATURE_TYPE_FANOUT="true"
-#! ENABLED="false"
+#! ENABLED="true"
 #! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
 #! GENERATE_FME_BUILD_NUM="6458"
 #! FANOUT_PREFIX=""
@@ -526,7 +526,7 @@
 #! IDENTIFIER="140"
 #! FEAT_GEOMTYPE="text_line_none"
 #! POSITION="154 -155"
-#! ORDER="75"
+#! ORDER="5e+014"
 #! COLLAPSED="true"
 #! KEYWORD="TEXTLINE_1"
 #! ENABLED="true"
@@ -541,12 +541,12 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="false"
-#! NODE_NAME="STEWART.WATERLINES"
+#! NODE_NAME="SUPPORT.WATERLINES"
 #! IS_EDITABLE="true"
 #! IDENTIFIER="182"
 #! FEAT_GEOMTYPE="oracle_nil oracle_point oracle_line oracle_area oracle_multipoint oracle_multiline oracle_multipoly oracle_arc oracle_circle oracle_rectangle oracle_collection oracle_surface oracle_solid oracle_multisurface oracle_multisolid"
 #! POSITION="3512 -1937"
-#! ORDER="108"
+#! ORDER="5e+014"
 #! COLLAPSED="true"
 #! KEYWORD="ORACLE8I_1"
 #! ENABLED="true"
@@ -614,13 +614,33 @@
 #! <PROPERTIES>
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="HTTP_DATASET"
 #! VALUE="TEXTLINE_1"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
 #! />
 #! </PROPERTIES>
 #! </SERVICE>
 #! <SERVICE
-#! NAME="fmesubscription"
+#! NAME="fmenotification"
 #! >
 #! <PROPERTIES>
 #! <PROPERTY
@@ -650,52 +670,53 @@
 #! />
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
-#! NAME="SUBSCRIBER"
-#! VALUE=""
-#! />
-#! <PROPERTY
-#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="SUCCESS_TOPICS"
 #! VALUE=""
 #! />
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
 #! NAME="TOPICS_LIST"
-#! VALUE="cad_waterqa"
+#! VALUE="cadqa_email"
 #! />
 #! </PROPERTIES>
 #! </SERVICE>
 #! </SERVICES>
+#! <REPOSITORY
+#! NAME="cadqa"
+#! />
+#! <ITEM
+#! NAME="D001 - CAD upload and email QA.fmw"
+#! />
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):"
-#! DEFAULT_VALUE="C:\tmp\email_json_content.txt"
+#! DEFAULT_VALUE="C:\safegit\fmepedia-validation\fme\data\email_content.json"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE TEXT DestDataset_ORACLE8I Destination Oracle Spatial Object Service:"
-#! DEFAULT_VALUE="xe"
+#! DEFAULT_VALUE="bpesri"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL IGNORE PASSWORD ORACLE8I_OUT_PASSWORD_ORACLE8I Password:"
-#! DEFAULT_VALUE="STEWART"
+#! DEFAULT_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMsz6MhrQzzpjn5a6uU3i6X91slT3v8Gsl55PbHXAg+fjJQyFBAdVaeb/SAhqtq0+pC6g5wCMS/QGlbZctCSFlq8BYLPaiH1+VAOxlQE650sJKhGtifFBdnAsVZ1C5kqQ4wl/8HjQWKVrj9NXK4B+8awxvHgekK6fWdaSiePETxO42M3yvQzwO6/SArujqWucIAhZYs/1P43+UEJ2KZWGBEdIHYwPXcKBnsoTQDFJx//YWAkcP+JEX5owV6AcLd1ME/x2d9s0qCk2dtndF1lJKb7LOYEPeQfbVfZY0kmAEL1mH2+Aub84V3amfXjLmQ39yUXKu8AwyzqmUtGhRUrRywqzQs3Th+AlWVJ)"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL IGNORE TEXT ORACLE8I_OUT_USER_NAME_ORACLE8I Username:"
-#! DEFAULT_VALUE="STEWART"
+#! DEFAULT_VALUE="SUPPORT"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE TEXT HTTP_AUTH_USERNAME Username:"
-#! DEFAULT_VALUE="fmepedia"
+#! DEFAULT_VALUE="admin"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE PASSWORD HTTP_AUTH_PASSWORD Password:"
-#! DEFAULT_VALUE="#2fmeauthor"
+#! DEFAULT_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszOZBEOHp7VQnk4/BzibPFsQoI/4tECGxQObKSxINEMG7zhlnIAM/MZAP6qkJwG2nDlEkokNGuxArJIGA/24ZbbH4MyIZB7DzQ9zcfO+e+pxRz76IQ+dop4eg0FWL/jA92yuP4gelBBpzuYS7WLCeg5uCVozSCozJFdy/Nh/KN6nrm0mItoF8NQko12W1du07lUJYNneB1Y4tS8ZwL+S0SmrLItkiXQKYAq3pz7Z7oXvkGIHmUfjWOz7vyTk4HAydqLzlHt3pLzLnY2LzGWQyFEZQTbAS2U+Mt+oljzglnndx+1bAvtRMEpvgPwcguRjqZ27elPhsUYbZJdZ6Y0MzCLtCnqQk77PII)"
 #! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -709,7 +730,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="1316 -2703"
 #! BOTTOM_RIGHT="1316 -2703"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="63"
@@ -723,7 +744,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="3673 -1372"
 #! BOTTOM_RIGHT="3673 -1372"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="10"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="0"
@@ -737,7 +758,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="4874 -822"
 #! BOTTOM_RIGHT="4874 -822"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="148"
@@ -751,7 +772,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="4876 -1148"
 #! BOTTOM_RIGHT="4876 -1148"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="176"
@@ -765,7 +786,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="5821 -681"
 #! BOTTOM_RIGHT="5821 -681"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="129"
@@ -779,7 +800,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="5715 -1193"
 #! BOTTOM_RIGHT="5715 -1193"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="135"
@@ -793,7 +814,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="903 -1798"
 #! BOTTOM_RIGHT="903 -1798"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="50"
@@ -807,7 +828,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="2661 -1961"
 #! BOTTOM_RIGHT="2661 -1961"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="41"
@@ -821,7 +842,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="3146 -2968"
 #! BOTTOM_RIGHT="3146 -2968"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="182"
@@ -835,7 +856,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="5742 -1812"
 #! BOTTOM_RIGHT="5742 -1812"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="166"
@@ -851,8 +872,8 @@
 #! TOP_LEFT="0 -872"
 #! BOTTOM_RIGHT="669 -2478"
 #! STICKY="true"
-#! COLOUR="0.470588,0.0627451,0.356863"
-#! CONTENTS="157 126 123 115 112 "
+#! COLOUR="0.466667,0.0627451,0.356863"
+#! CONTENTS="126 123 157 115 112 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="119"
@@ -861,8 +882,8 @@
 #! TOP_LEFT="11 -19"
 #! BOTTOM_RIGHT="668 -799"
 #! STICKY="true"
-#! COLOUR="0.360784,0.027451,0.113725"
-#! CONTENTS="140 118 142 116 117 "
+#! COLOUR="0.356863,0.027451,0.109804"
+#! CONTENTS="142 117 140 116 118 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="66"
@@ -871,8 +892,8 @@
 #! TOP_LEFT="773 -27"
 #! BOTTOM_RIGHT="6295 -1578"
 #! STICKY="true"
-#! COLOUR="0.678431,0.262745,0.823529"
-#! CONTENTS="206 160 170 110 122 203 155 141 164 177 90 135 205 153 176 165 187 200 136 161 175 188 169 202 14 191 179 162 114 159 172 137 158 174 190 120 9 199 167 20 143 129 104 151 181 148 173 138 198 154 13 156 163 10 180 204 189 197 171 "
+#! COLOUR="0.67451,0.258824,0.819608"
+#! CONTENTS="172 180 136 187 153 191 171 148 206 90 160 170 163 110 203 164 177 114 155 205 204 165 129 200 161 13 189 158 143 175 104 197 120 9 169 179 188 202 10 14 20 159 156 137 174 162 190 199 167 151 176 122 181 141 173 135 138 198 154 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="122"
@@ -881,8 +902,8 @@
 #! TOP_LEFT="1314 -130"
 #! BOTTOM_RIGHT="3543 -895"
 #! STICKY="true"
-#! COLOUR="0.0431373,0.513725,0.301961"
-#! CONTENTS="10 161 9 141 151 171 156 "
+#! COLOUR="0.0431373,0.509804,0.301961"
+#! CONTENTS="10 9 171 141 156 161 151 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="193"
@@ -891,8 +912,8 @@
 #! TOP_LEFT="797 -1695"
 #! BOTTOM_RIGHT="1486 -2645"
 #! STICKY="true"
-#! COLOUR="0.262745,0.756863,0.498039"
-#! CONTENTS="192 50 145 76 52 53 "
+#! COLOUR="0.258824,0.756863,0.494118"
+#! CONTENTS="145 52 53 192 50 76 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="139"
@@ -901,8 +922,8 @@
 #! TOP_LEFT="1820 -1695"
 #! BOTTOM_RIGHT="3473 -2277"
 #! STICKY="true"
-#! COLOUR="0.756863,0.513725,0.188235"
-#! CONTENTS="43 41 65 37 "
+#! COLOUR="0.756863,0.509804,0.184314"
+#! CONTENTS="41 65 43 37 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="194"
@@ -911,8 +932,8 @@
 #! TOP_LEFT="1812 -2298"
 #! BOTTOM_RIGHT="3483 -2906"
 #! STICKY="true"
-#! COLOUR="0.239216,0.580392,0.4"
-#! CONTENTS="73 64 80 74 75 68 63 "
+#! COLOUR="0.239216,0.576471,0.4"
+#! CONTENTS="75 68 73 63 80 64 74 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="196"
@@ -921,8 +942,8 @@
 #! TOP_LEFT="3957 -1587"
 #! BOTTOM_RIGHT="6300 -2914"
 #! STICKY="true"
-#! COLOUR="0.0862745,0.196078,0.490196"
-#! CONTENTS="130 144 133 97 85 106 166 108 147 134 105 195 185 113 84 98 127 146 201 111 59 128 207 152 99 149 62 150 "
+#! COLOUR="0.0823529,0.192157,0.486275"
+#! CONTENTS="207 152 113 99 149 85 105 195 185 144 130 133 97 166 128 150 147 98 134 62 106 108 84 127 146 201 59 111 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="81"
@@ -931,8 +952,8 @@
 #! TOP_LEFT="773 -1593"
 #! BOTTOM_RIGHT="3935 -2906"
 #! STICKY="true"
-#! COLOUR="0.290196,0.745098,0.419608"
-#! CONTENTS="73 183 75 69 182 50 39 63 80 37 67 194 52 145 41 139 53 184 68 65 64 193 192 43 74 76 "
+#! COLOUR="0.286275,0.741176,0.419608"
+#! CONTENTS="184 69 50 68 182 76 43 63 64 74 37 194 193 183 192 75 41 73 39 52 67 65 145 53 80 139 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="105"
@@ -941,8 +962,8 @@
 #! TOP_LEFT="3988 -1688"
 #! BOTTOM_RIGHT="5117 -2887"
 #! STICKY="true"
-#! COLOUR="0.843137,0.333333,0.854902"
-#! CONTENTS="59 106 97 62 98 111 99 128 133 84 85 "
+#! COLOUR="0.839216,0.329412,0.854902"
+#! CONTENTS="133 84 59 85 106 97 128 98 111 99 62 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="195"
@@ -952,7 +973,7 @@
 #! BOTTOM_RIGHT="6265 -2884"
 #! STICKY="true"
 #! COLOUR="0.929412,0.337255,0.764706"
-#! CONTENTS="144 166 108 134 185 113 149 130 201 147 146 207 127 150 "
+#! CONTENTS="113 108 144 134 150 149 130 201 147 146 207 185 166 127 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="187"
@@ -961,8 +982,8 @@
 #! TOP_LEFT="4784 -128"
 #! BOTTOM_RIGHT="6267 -1538"
 #! STICKY="true"
-#! COLOUR="0.811765,0.988235,0.921569"
-#! CONTENTS="110 205 176 191 148 155 165 163 206 175 170 190 120 188 137 204 177 138 189 135 129 "
+#! COLOUR="0.811765,0.984314,0.921569"
+#! CONTENTS="177 138 155 148 163 204 110 205 176 120 165 206 129 191 175 190 170 188 189 137 135 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="104"
@@ -971,8 +992,8 @@
 #! TOP_LEFT="3560 -126"
 #! BOTTOM_RIGHT="4768 -1540"
 #! STICKY="true"
-#! COLOUR="0.333333,0.968627,0.686275"
-#! CONTENTS="181 90 159 158 197 200 114 198 199 179 172 154 153 180 "
+#! COLOUR="0.329412,0.964706,0.686275"
+#! CONTENTS="200 198 199 153 90 158 179 180 181 159 114 197 154 172 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="143"
@@ -981,8 +1002,8 @@
 #! TOP_LEFT="1300 -914"
 #! BOTTOM_RIGHT="3541 -1541"
 #! STICKY="true"
-#! COLOUR="0.431373,0.776471,0.478431"
-#! CONTENTS="162 164 13 160 20 173 174 "
+#! COLOUR="0.431373,0.776471,0.47451"
+#! CONTENTS="173 162 13 174 160 20 164 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -1072,7 +1093,7 @@
 #! IDENTIFIER="123"
 #! TYPE="FeatureReader"
 #! VERSION="3"
-#! POSITION="80 -952"
+#! POSITION="86 -982"
 #! ORDER="76"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1143,7 +1164,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader"/>
 #! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
 #! <XFORM_PARM PARM_NAME="ACAD_EXPLODE_MTEXT" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="email_publisher_attachment&lt;opencurly&gt;0&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;email_publisher_attachment&lt;opencurly&gt;0&lt;closecurly&gt;&lt;closeparen&gt;"/>
 #! <XFORM_PARM PARM_NAME="ACAD_READ_GROUPS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="water_distribution_lines%water_distribution_nodes%water_meters"/>
 #! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="water_distribution_lines,&quot;PROJECT,SYMCODE,ANNO_DIAM,FEATURE_ID,autocad_elevation,LEAD_MAIN_,MATERIAL,STATUS,DRAW,WNM_TYPE,COMPKEY,SYMCODE2,PR_ZONE,DIAMETER,COMPTYPE,TILE,YEAR_INSTA&quot;,water_distribution_nodes,&quot;FEATURE_ID,TILE&quot;,water_meters,"/>
@@ -4497,17 +4518,17 @@
 #! </WORKSPACE>
 #! 
 GUI IGNORE SourceDataset_TEXTLINE_1,TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1,TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1,TEXTLINE_IN_SKIP_LINES_TEXTLINE_1,TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1,TEXTLINE_IN_ENCODING_TEXTLINE_1,DestDataset_ORACLE8I_1,ORACLE8I_OUT_USER_NAME_ORACLE8I_1,ORACLE8I_OUT_PASSWORD_ORACLE8I_1,_START_TRANSACTION_ORACLE8I_1,_CHUNK_SIZE_ORACLE8I_1,_TRANSACTION_INTERVAL_ORACLE8I_1,_BEGIN_SQL_ORACLE8I_1,_END_SQL_ORACLE8I_1,_STRICT_ATTR_CONVERSION_ORACLE8I_1,_WRITER_MODE_ORACLE8I_1,_ORACLE8I_Workspace_ORACLE8I_1,_ORACLE8I_OUT_HANDLE_MULTIPLE_SPATIAL_COLUMNS_ORACLE8I_1
-DEFAULT_MACRO SourceDataset_TEXTLINE C:\tmp\email_json_content.txt
+DEFAULT_MACRO SourceDataset_TEXTLINE C:\safegit\fmepedia-validation\fme\data\email_content.json
 GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):
-DEFAULT_MACRO DestDataset_ORACLE8I xe
+DEFAULT_MACRO DestDataset_ORACLE8I bpesri
 GUI IGNORE TEXT DestDataset_ORACLE8I Destination Oracle Spatial Object Service:
-DEFAULT_MACRO ORACLE8I_OUT_PASSWORD_ORACLE8I STEWART
+DEFAULT_MACRO ORACLE8I_OUT_PASSWORD_ORACLE8I fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMsz6MhrQzzpjn5a6uU3i6X91slT3v8Gsl55PbHXAg+fjJQyFBAdVaeb/SAhqtq0+pC6g5wCMS/QGlbZctCSFlq8BYLPaiH1+VAOxlQE650sJKhGtifFBdnAsVZ1C5kqQ4wl/8HjQWKVrj9NXK4B+8awxvHgekK6fWdaSiePETxO42M3yvQzwO6/SArujqWucIAhZYs/1P43+UEJ2KZWGBEdIHYwPXcKBnsoTQDFJx//YWAkcP+JEX5owV6AcLd1ME/x2d9s0qCk2dtndF1lJKb7LOYEPeQfbVfZY0kmAEL1mH2+Aub84V3amfXjLmQ39yUXKu8AwyzqmUtGhRUrRywqzQs3Th+AlWVJ)
 GUI OPTIONAL IGNORE PASSWORD ORACLE8I_OUT_PASSWORD_ORACLE8I Password:
-DEFAULT_MACRO ORACLE8I_OUT_USER_NAME_ORACLE8I STEWART
+DEFAULT_MACRO ORACLE8I_OUT_USER_NAME_ORACLE8I SUPPORT
 GUI OPTIONAL IGNORE TEXT ORACLE8I_OUT_USER_NAME_ORACLE8I Username:
-DEFAULT_MACRO HTTP_AUTH_USERNAME fmepedia
+DEFAULT_MACRO HTTP_AUTH_USERNAME admin
 GUI IGNORE TEXT HTTP_AUTH_USERNAME Username:
-DEFAULT_MACRO HTTP_AUTH_PASSWORD #2fmeauthor
+DEFAULT_MACRO HTTP_AUTH_PASSWORD fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszOZBEOHp7VQnk4/BzibPFsQoI/4tECGxQObKSxINEMG7zhlnIAM/MZAP6qkJwG2nDlEkokNGuxArJIGA/24ZbbH4MyIZB7DzQ9zcfO+e+pxRz76IQ+dop4eg0FWL/jA92yuP4gelBBpzuYS7WLCeg5uCVozSCozJFdy/Nh/KN6nrm0mItoF8NQko12W1du07lUJYNneB1Y4tS8ZwL+S0SmrLItkiXQKYAq3pz7Z7oXvkGIHmUfjWOz7vyTk4HAydqLzlHt3pLzLnY2LzGWQyFEZQTbAS2U+Mt+oljzglnndx+1bAvtRMEpvgPwcguRjqZ27elPhsUYbZJdZ6Y0MzCLtCnqQk77PII)
 GUI IGNORE PASSWORD HTTP_AUTH_PASSWORD Password:
 INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(DestDataset_ORACLE8I)} == {}} { puts_real {Parameter 'DestDataset_ORACLE8I' must be given a value.}; exit 1; }; ]
@@ -4521,7 +4542,7 @@ READER_GEN_DIRECTIVES READ_WHOLE_FILE_AT_ONCE,YES,READ_BOTTOM_UP,NO,SKIP_LINES,0
 WRITER_TYPE MULTI_WRITER
 MULTI_WRITER_DATASET_ORDER BY_ID
 MULTI_WRITER_FIRST_WRITER_ID 0
-MULTI_WRITER_TYPE{0} NULL
+MULTI_WRITER_TYPE{0} ORACLE8I
 MULTI_WRITER_KEYWORD{0} ORACLE8I_1
 #! END_WB_HEADER
 #! START_WB_HEADER
@@ -4679,7 +4700,7 @@ ORACLE8I_1_BEGIN_SQL{0} "$(_BEGIN_SQL_ORACLE8I_1)"
 # ============================================================================
 # The following specifies an SQL command to execute after closing all the
 # ORACLE tables.
-DEFAULT_MACRO _END_SQL_ORACLE8I_1 SELECT<space>WATERLINES_HTTPREQUEST_FUNC<openparen><closeparen><space>FROM<space>DUAL
+DEFAULT_MACRO _END_SQL_ORACLE8I_1 <space>--<space>SELECT<space>WATERLINES_HTTPREQUEST_FUNC<openparen><closeparen><space>FROM<space>DUAL
 GUI OPTIONAL TEXT_EDIT_SQL _END_SQL_ORACLE8I_1 SQL Statement To Execute After Translation:
 ORACLE8I_1_END_SQL{0} "$(_END_SQL_ORACLE8I_1)"
 # ============================================================================
@@ -4807,142 +4828,11 @@ INCLUDE [    set featTypes {water_distribution_lines};    set curIndex 0;    set
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureReader_GeometryRemover    INPUT  FEATURE_TYPE AttributeExposer_OUTPUT    OUTPUT FEATURE_TYPE QueryFactoryInputFeatureType      $(REMOVE_GEOM_FUNC)
 
-FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE QueryFactoryInputFeatureType    $(QUERY_INTERACTION_LINE)    COMBINE_ATTRIBUTES  PREFER_RESULT    COMBINE_GEOMETRY    RESULT_ONLY    READER_TYPE         ACAD    READER_DATASET      "email_publisher_attachment<opencurly>0<closecurly>"    READER_IDS          water_distribution_lines    READER_PARAMS     $(FeatureReader_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE *      @SupplyAttributes(fme_feature_type,@FeatureType())      @Tcl2("set FME_FeatureType [FeatureReader_findInListElseDefault {$(FORMATTEDFEATURETYPES)} $FME_FeatureType {<OTHER>}]")      @FeatureType(@Concatenate(FeatureReader,"_",@FeatureType()))      @Transform(ACAD,FME_GENERIC)    OUTPUT QUERY FEATURE_TYPE FeatureReader_INITIATOR
+FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE QueryFactoryInputFeatureType    $(QUERY_INTERACTION_LINE)    COMBINE_ATTRIBUTES  PREFER_RESULT    COMBINE_GEOMETRY    RESULT_ONLY    READER_TYPE         ACAD    READER_DATASET      "@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>email_publisher_attachment<opencurly>0<closecurly><closeparen>,FeatureReader)"    READER_IDS          water_distribution_lines    READER_PARAMS     $(FeatureReader_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE *      @SupplyAttributes(fme_feature_type,@FeatureType())      @Tcl2("set FME_FeatureType [FeatureReader_findInListElseDefault {$(FORMATTEDFEATURETYPES)} $FME_FeatureType {<OTHER>}]")      @FeatureType(@Concatenate(FeatureReader,"_",@FeatureType()))      @Transform(ACAD,FME_GENERIC)    OUTPUT QUERY FEATURE_TYPE FeatureReader_INITIATOR
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureReader water_distribution_lines Splitter"   INPUT FEATURE_TYPE FeatureReader_water_distribution_lines   OUTPUT FEATURE_TYPE FeatureReader_water_distribution_lines_0_xkQNYCcvkEs=   OUTPUT FEATURE_TYPE FeatureReader_water_distribution_lines_1_xkQNYCcvkEs=
 FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureReader <OTHER> Output Nuker"   INPUT FEATURE_TYPE FeatureReader_<OTHER>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureReader INITIATOR Output Nuker"   INPUT FEATURE_TYPE FeatureReader_INITIATOR
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * SortFactory    FACTORY_NAME FeatureHolder    INPUT  FEATURE_TYPE FeatureReader_water_distribution_lines_1_xkQNYCcvkEs=    OUTPUT SORTED FEATURE_TYPE FeatureHolder_OUTPUT
-
-# -------------------------------------------------------------------------
-
-DEFAULT_MACRO WB_CURRENT_CONTEXT
-MACRO VariableRetriever_VAR _invalidFeatures
-INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_VAR $(WB_CURRENT_CONTEXT)__invalidFeatures}; };
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYPE FeatureHolder_OUTPUT    OUTPUT FEATURE_TYPE VariableRetriever_OUTPUT        @GlobalVariable("$(VariableRetriever_VAR)",fme_result_attribute,_invalidFeatures)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TestFactory    FACTORY_NAME Tester_3    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    TEST "@Value(_invalidFeatures)" != "yes"    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_3_PASSED
-FACTORY_DEF * TeeFactory   FACTORY_NAME "Tester_3 PASSED Splitter"   INPUT FEATURE_TYPE Tester_3_PASSED   OUTPUT FEATURE_TYPE Tester_3_PASSED_0_i7bN5VlX29Q=   OUTPUT FEATURE_TYPE Tester_3_PASSED_1_i7bN5VlX29Q=
-# -------------------------------------------------------------------------
-
-Tcl2 proc AttributeCreator_4_0795ec00_dadc_4179_8ce2_3a8953342f7c0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_4}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_4}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_4    INPUT  FEATURE_TYPE Tester_3_PASSED_0_i7bN5VlX29Q=    OUTPUT FEATURE_TYPE AttributeCreator_4_OUTPUT         "@Tcl2( AttributeCreator_4_0795ec00_dadc_4179_8ce2_3a8953342f7c0_attrSetter {(fme_db_operation,INSERT)} )"
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * SortFactory    FACTORY_NAME FeatureHolder_2    INPUT  FEATURE_TYPE AttributeCreator_4_OUTPUT    OUTPUT SORTED FEATURE_TYPE FeatureHolder_2_OUTPUT
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc Counter_0b20b65a_5b02_4872_8e52_f085eec4ee4f0_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Global} == {Local} }    {       set xFormName [FME_EncodeText {Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME Counter    INPUT  FEATURE_TYPE FeatureHolder_2_OUTPUT    OUTPUT FEATURE_TYPE Counter_OUTPUT         "PRIMARYINDEX" @Count(fme_encoded,@Tcl2("Counter_0b20b65a_5b02_4872_8e52_f085eec4ee4f0_createDomain {_PrimaryIndex}"), 0)
-
-# -------------------------------------------------------------------------
-Lookup FeatureTypeFilter_Lut   water_distribution_lines ok   water_meters ok   water_distribution_nodes ok   "" notok   ENCODED
-
-FACTORY_DEF * TestFactory    FACTORY_NAME FeatureTypeFilter    INPUT  FEATURE_TYPE Counter_OUTPUT    TEST @Lookup(FeatureTypeFilter_Lut,fme_feature_type,ENCODED_ATTR) == "ok"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(FeatureTypeFilter_&fme_feature_type)    OUTPUT FAILED FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>
-FACTORY_DEF * TestFactory    FACTORY_NAME FeatureTypeFilter_BlankFilter    INPUT FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>    TEST @Value(fme_feature_type) == ""    OUTPUT PASSED FEATURE_TYPE FeatureTypeFilter_<BLANK>    OUTPUT FAILED FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>
-
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter water_distribution_lines Splitter"   INPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines   OUTPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_0_Zo89jREMua8=   OUTPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_1_Zo89jREMua8=
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter water_meters Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_water_meters
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter water_distribution_nodes Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_nodes
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter <BLANK> Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_<BLANK>
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter <UNFILTERED> Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCopier    INPUT  FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_1_Zo89jREMua8=    OUTPUT FEATURE_TYPE AttributeCopier_OUTPUT         @CopyAttributes(email_attach,email_publisher_attachment{0})
-
-# -------------------------------------------------------------------------
-
-DEFAULT_MACRO __StatisticsCalculator_cda477ac_feea_4860_8024_b3299f8d44430_GROUP_BY
-MACRO __StatisticsCalculator_cda477ac_feea_4860_8024_b3299f8d44430_GROUP_BY email_attach
-DYNAMIC_FUNCTION_CONFIGURATION Python FMEOBJECTS
-DYNAMIC_FUNCTION_CONFIGURATION Python import StatisticsCalculator
-DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    'StatisticsCalculator',{     'GROUP_BY':FME_MacroValues['__StatisticsCalculator_cda477ac_feea_4860_8024_b3299f8d44430_GROUP_BY'],     'STATS_ATTR':'PRIMARYINDEX',     'MIN_ATTR':'_min',     'MAX_ATTR':'_max',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'MODE_ATTR':'_mode',     None:None})"
-FACTORY_DEF * TeeFactory    FACTORY_NAME StatisticsCalculator_Processor    INPUT  FEATURE_TYPE AttributeCopier_OUTPUT    OUTPUT FEATURE_TYPE __ORIGINAL__         @Python(StatisticsCalculator.recordFeature,StatisticsCalculator)
-FACTORY_DEF * CreationFactory    FACTORY_NAME StatisticsCalculator_Creator     CREATE_AT_END     NUMBER_TO_CREATE 1     OUTPUT FEATURE_TYPE __SINGLE_GUY__        @SupplyAttributes(StatisticsCalculator_SUMMARY_STATS,True)
-FACTORY_DEF * SortFactory    FACTORY_NAME StatisticsCalculator_Outputter    INPUT FEATURE_TYPE __SINGLE_GUY__    OUTPUT SORTED FEATURE_TYPE __SINGLE_GUY__       @Python(StatisticsCalculator.summarizeStatistics,StatisticsCalculator,__SINGLE_GUY__)
-FACTORY_DEF * ElementFactory    FACTORY_NAME StatisticsCalculator_Exploder    INPUT FEATURE_TYPE __SINGLE_GUY__        StatisticsCalculator_SUMMARY_STATS True        @RemoveAttributes(StatisticsCalculator_SUMMARY_STATS)    LIST_NAME StatisticsCalculator_stats{}    MODE LEAN_AND_MEAN    CLONE_GEOMETRY no    OUTPUT ELEMENT FEATURE_TYPE __SINGLE_GUY__
-FACTORY_DEF * TestFactory    FACTORY_NAME StatisticsCalculator_FinalJudge    INPUT FEATURE_TYPE __ORIGINAL__    INPUT FEATURE_TYPE __SINGLE_GUY__    TEST @FeatureType() == __SINGLE_GUY__    OUTPUT PASSED FEATURE_TYPE StatisticsCalculator_STATISTICS
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc AttributeCreator_5_32af7086_25b4_44af_bb91_1fa85cc18ca20_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_5}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_5}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_5    INPUT  FEATURE_TYPE StatisticsCalculator_STATISTICS    OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT         "@Tcl2( AttributeCreator_5_32af7086_25b4_44af_bb91_1fa85cc18ca20_attrSetter {(Remarks,Load<space>Complete<space>-<space>Data<space>Validation<space>was<space>Successful,FEATURE_ID,<space>,WNM_TYPE,,DIAMETER,)} )"
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc TimeStamper_formatGetter { inVal } {    if { [string compare $inVal {FME Date/Time (^Y^m^d^H^M^S)}] == 0 } {       return {^Y^m^d^H^M^S};    } elseif { [string compare $inVal {FME Date (^Y^m^d)}] == 0} {       return {^Y^m^d};    } elseif { [string compare $inVal {FME Time (^H^M^S)}] == 0} {       return {^H^M^S};    } elseif { [string compare $inVal {XML Date (^Y-^m-^d)}] == 0} {       return {^Y-^m-^d};    } elseif { [string compare $inVal {XML DateTime (^Y-^m-^dT^H:^M:^S)}] == 0} {       return {^Y-^m-^dT^H:^M:^S};    } elseif { [string compare $inVal {XML Time (^H:^M:^S)}] == 0} {       return {^H:^M:^S};    } elseif { [string compare $inVal {Locale Date (^c)}] == 0} {       return {^c};    };    return $inVal; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME TimeStamper    INPUT  FEATURE_TYPE AttributeCreator_5_OUTPUT    OUTPUT FEATURE_TYPE TimeStamper_OUTPUT         @SupplyAttributes(ENCODED, INSTALLED, @Timestamp(@Tcl2("TimeStamper_formatGetter {^x } ")))
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc TimeStamper_2_formatGetter { inVal } {    if { [string compare $inVal {FME Date/Time (^Y^m^d^H^M^S)}] == 0 } {       return {^Y^m^d^H^M^S};    } elseif { [string compare $inVal {FME Date (^Y^m^d)}] == 0} {       return {^Y^m^d};    } elseif { [string compare $inVal {FME Time (^H^M^S)}] == 0} {       return {^H^M^S};    } elseif { [string compare $inVal {XML Date (^Y-^m-^d)}] == 0} {       return {^Y-^m-^d};    } elseif { [string compare $inVal {XML DateTime (^Y-^m-^dT^H:^M:^S)}] == 0} {       return {^Y-^m-^dT^H:^M:^S};    } elseif { [string compare $inVal {XML Time (^H:^M:^S)}] == 0} {       return {^H:^M:^S};    } elseif { [string compare $inVal {Locale Date (^c)}] == 0} {       return {^c};    };    return $inVal; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME TimeStamper_2    INPUT  FEATURE_TYPE TimeStamper_OUTPUT    OUTPUT FEATURE_TYPE TimeStamper_2_OUTPUT         @SupplyAttributes(ENCODED, INSTALLEDtime, @Timestamp(@Tcl2("TimeStamper_2_formatGetter {^X} ")))
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc StringConcatenator_829d5518_59f2_4704_ba4b_cfa99d4fcf410_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_result}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator    INPUT  FEATURE_TYPE TimeStamper_2_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_OUTPUT        @Tcl2("StringConcatenator_829d5518_59f2_4704_ba4b_cfa99d4fcf410_doSetAttr {@EvaluateExpression(STRING_ENCODED,<lt>!doctype<space>html<gt><lf><lt>head<gt><lf><space><space><lt>meta<space>charset=<quote>utf-8<quote><gt><lf><lf><space><space><lt>!--<space>Use<space>the<space>.htaccess<space>and<space>remove<space>these<space>lines<space>to<space>avoid<space>edge<space>case<space>issues.<space>More<space>info:<space>h5bp.com<solidus>i<solidus>378<space>--<gt><lf><space><space><lt>meta<space>http-equiv=<quote>X-UA-Compatible<quote><space>content=<quote>IE=edge<comma>chrome=1<quote><gt><lf><lf><space><space><lt>title<gt><lt><solidus>title<gt><lf><space><space><lt>meta<space>name=<quote>description<quote><space>content=<quote><quote><gt><lf><lf><space><space><lt>!--<space>Mobile<space>viewport<space>optimized:<space>h5bp.com<solidus>viewport<space>--<gt><lf><space><space><lt>meta<space>name=<quote>viewport<quote><space>content=<quote>width=device-width<quote><gt><lf><lf><lf><lt><solidus>head<gt><lf><lt>body<gt><lf><tab><at>Value<openparen>Remarks<closeparen><lt>br<gt>Date<space>Loaded:<space><space><at>Value<openparen>INSTALLED<closeparen><space><space><at>Value<openparen>INSTALLEDtime<closeparen><lt>br<gt>Number<space>of<space>Features<space>Added:<space><at>Value<openparen>_count<closeparen><lf><lt><solidus>body<gt><lf><lt><solidus>html<gt>,StringConcatenator)} ")
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE StringConcatenator_OUTPUT    OUTPUT FEATURE_TYPE UUIDGenerator_OUTPUT         "_uuid" @UUID()
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc StringConcatenator_4_8093a007_b946_49af_be65_be449dd5717d0_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {filename}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_4    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_4_OUTPUT        @Tcl2("StringConcatenator_4_8093a007_b946_49af_be65_be449dd5717d0_doSetAttr {@EvaluateExpression(STRING_ENCODED,c:<solidus>temp<solidus><at>Value<openparen>_uuid<closeparen>.html,StringConcatenator_4)} ")
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileWriter    INPUT  FEATURE_TYPE StringConcatenator_4_OUTPUT    OUTPUT FEATURE_TYPE AttributeFileWriter_OUTPUT         @File(DestWriteSrcRead,_result,"@Value(filename)",fme-system)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME FilenamePartExtractor    INPUT  FEATURE_TYPE AttributeFileWriter_OUTPUT    OUTPUT FEATURE_TYPE FilenamePartExtractor_OUTPUT         @SupplyAttributes("submitted_file",@Filenamepart(FILENAME,@Value("email_attach")))
-
-# -------------------------------------------------------------------------
-
-DEFAULT_MACRO WB_CURRENT_CONTEXT
-MACRO VariableRetriever_5_VAR email_from_global
-INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_5_VAR $(WB_CURRENT_CONTEXT)_email_from_global}; };
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever_5    INPUT  FEATURE_TYPE FilenamePartExtractor_OUTPUT    OUTPUT FEATURE_TYPE VariableRetriever_5_OUTPUT        @GlobalVariable("$(VariableRetriever_5_VAR)",fme_result_attribute,email_from_global)
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc StringConcatenator_2_44be68cb_b504_48d9_8733_fa17205650f20_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {success_email_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE VariableRetriever_5_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_44be68cb_b504_48d9_8733_fa17205650f20_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf>email_to:<quote><at>Value<openparen>email_from_global<closeparen><quote><comma><lf>email_attachment:<space><quote><at>Value<openparen>filename<closeparen><quote><comma><lf>email_subject:<space><quote>QA<space>for<space>file<space><at>Value<openparen>submitted_file<closeparen><space>succeeded!<quote><comma><lf>subscriber_content:<space><quote>File<space><at>Value<openparen>submitted_file<closeparen><space>has<space>been<space>loaded<space>into<space>the<space>central<space>repository<space>database.<quote><lf><closecurly>,StringConcatenator_2)} ")
-
-# -------------------------------------------------------------------------
-
-DYNAMIC_FUNCTION_CONFIGURATION Http    FMEServerNotifier_http_request    REQUEST_HEADER ""    HTTP_USERNAME "$(HTTP_AUTH_USERNAME)"    HTTP_PASSWORD "$(HTTP_AUTH_PASSWORD)"    HTTP_AUTHMETHOD Basic    UPLOAD_BODY success_email_content    UPLOAD_CONTENT_TYPE text/plain    USE_RECV_HEADER_ENCODING yes    SAVED_HEADERS_ATTR _headers    STATUS_CODE_ATTR "_http_status_code"    CONTINUE_ON_ERROR yes    USE_COOKIES no
-FACTORY_DEF * TeeFactory    FACTORY_NAME FMEServerNotifier    INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    OUTPUT FEATURE_TYPE FMEServerNotifier_OUTPUT         @Http(POST,@EvaluateExpression(STRING_ENCODED,localhost<solidus>fmerest<solidus>notifier<solidus>topics<solidus>cad_waterqa_success<solidus>publish.json,HTTPUploader), _url_contents, FMEServerNotifier_http_request)
-
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier OUTPUT Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_OUTPUT
-# -------------------------------------------------------------------------
-
-INCLUDE [ puts "MACRO REAL_RATE [expr 1 * -1 ]" ]
-FACTORY_DEF * SamplingFactory    FACTORY_NAME Sampler    SAMPLE_RATE $(REAL_RATE)    INPUT  FEATURE_TYPE Tester_3_PASSED_1_i7bN5VlX29Q=    OUTPUT SAMPLED FEATURE_TYPE ___SAMPLED___
-# This TeeFactory is needed because Sampler will still output features if it has no OUTPUT clauses specified.
-# This way we behave nicely even if there are no output connections on the transformer. See PR#28886.
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME Sampler_Sampled    INPUT FEATURE_TYPE ___SAMPLED___    OUTPUT FEATURE_TYPE Sampler_SAMPLED
-
-
-# -------------------------------------------------------------------------
-
-Tcl2 proc AttributeCreator_3_aa7478d3_e023_4231_a708_6449e5cdaf2f0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_3}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_3}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_3    INPUT  FEATURE_TYPE Sampler_SAMPLED    OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT         "@Tcl2( AttributeCreator_3_aa7478d3_e023_4231_a708_6449e5cdaf2f0_attrSetter {(fme_db_operation,DELETE,fme_where,TILE<space>=<space><apos>N25<apos>)} )"
-
 # -------------------------------------------------------------------------
 
 INCLUDE [    if {"No" == "Yes"} {       puts "MACRO COLLECTION_HANDLING *";    } else {       puts "MACRO COLLECTION_HANDLING NOT_THIS_TIME";    } ]
@@ -4981,16 +4871,16 @@ FACTORY_DEF * TestFactory    FACTORY_NAME GeometryFilter_Router    INPUT FEATURE
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_2_VAR email_from_global
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_2_VAR $(WB_CURRENT_CONTEXT)_email_from_global}; } ]
-Tcl2 proc VariableSetter_2_a835b346_2a86_4ea1_9148_1eaa390c54040_setGlobalVar {varName varValue} {   set attrName VariableSetter_2_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_2_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter_2    INPUT  FEATURE_TYPE GeometryFilter_LINE    OUTPUT FEATURE_TYPE VariableSetter_2_OUTPUT        @Tcl2("VariableSetter_2_a835b346_2a86_4ea1_9148_1eaa390c54040_setGlobalVar {$(VariableSetter_2_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>email_publisher_from<closeparen>,VariableSetter_2)} ")
+Tcl2 proc VariableSetter_2_192d9224_50ef_445f_8e3f_869b19ad80ad13_setGlobalVar {varName varValue} {   set attrName VariableSetter_2_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_2_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter_2    INPUT  FEATURE_TYPE GeometryFilter_LINE    OUTPUT FEATURE_TYPE VariableSetter_2_OUTPUT        @Tcl2("VariableSetter_2_192d9224_50ef_445f_8e3f_869b19ad80ad13_setGlobalVar {$(VariableSetter_2_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>email_publisher_from<closeparen>,VariableSetter_2)} ")
 
 # -------------------------------------------------------------------------
 
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_3_VAR email_attachment_global
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_3_VAR $(WB_CURRENT_CONTEXT)_email_attachment_global}; } ]
-Tcl2 proc VariableSetter_3_85a081f2_0b8b_4e30_9a90_f5f1626582740_setGlobalVar {varName varValue} {   set attrName VariableSetter_3_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_3_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter_3    INPUT  FEATURE_TYPE VariableSetter_2_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_3_OUTPUT        @Tcl2("VariableSetter_3_85a081f2_0b8b_4e30_9a90_f5f1626582740_setGlobalVar {$(VariableSetter_3_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>email_publisher_attachment<opencurly>0<closecurly><closeparen>,VariableSetter_3)} ")
+Tcl2 proc VariableSetter_3_24dc7f3c_4441_49e1_86c6_285147d23aa013_setGlobalVar {varName varValue} {   set attrName VariableSetter_3_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_3_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter_3    INPUT  FEATURE_TYPE VariableSetter_2_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_3_OUTPUT        @Tcl2("VariableSetter_3_24dc7f3c_4441_49e1_86c6_285147d23aa013_setGlobalVar {$(VariableSetter_3_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>email_publisher_attachment<opencurly>0<closecurly><closeparen>,VariableSetter_3)} ")
 
 # -------------------------------------------------------------------------
 
@@ -5001,16 +4891,16 @@ FACTORY_DEF * TestFactory    FACTORY_NAME GeometryOGCValidator    INPUT  FEATURE
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_VAR _invalidFeatures
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_VAR $(WB_CURRENT_CONTEXT)__invalidFeatures}; } ]
-Tcl2 proc VariableSetter_0607899c_dcc6_40a8_a740_14629afa0a530_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE GeometryOGCValidator_FAILED    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_0607899c_dcc6_40a8_a740_14629afa0a530_setGlobalVar {$(VariableSetter_VAR)} {yes} ")
+Tcl2 proc VariableSetter_d22f4c7d_9118_47d0_b965_85e5d16596d413_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE GeometryOGCValidator_FAILED    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_d22f4c7d_9118_47d0_b965_85e5d16596d413_setGlobalVar {$(VariableSetter_VAR)} {yes} ")
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME XMLTemplater INPUT CONTROL_FEATURE FEATURE_TYPE VariableSetter_OUTPUT INPUT DATA_FEATURE FEATURE_TYPE XMLTemplater_DataFeatures RESULT_ATTR Remarks OUTPUT_XML_HEADER YES BUCKET_ATTR_NAME __xml_templater_bucket__ CONTROL_TEMPLATE_EXPR <lt>div<space>style=<quote>min-width:<space>200px<semicolon><quote><gt>Invalid<space>Geometry<lf><lt><solidus>div<gt> OUTPUT XML_DOCUMENT FEATURE_TYPE XMLTemplater_OUTPUT
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_e6e00555_bc2d_456e_a3c7_cc4d5d7534640_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_40e40b55_e0b1_4428_8b8b_1a29a9e311b813_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE XMLTemplater_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_e6e00555_bc2d_456e_a3c7_cc4d5d7534640_attrSetter {(_invalid_features,yes)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE XMLTemplater_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_40e40b55_e0b1_4428_8b8b_1a29a9e311b813_attrSetter {(_invalid_features,yes)} )"
 
 # -------------------------------------------------------------------------
 
@@ -5020,19 +4910,19 @@ FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE Geometry
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_4_VAR _invalidFeatures
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_4_VAR $(WB_CURRENT_CONTEXT)__invalidFeatures}; } ]
-Tcl2 proc VariableSetter_4_ccb5df14_c248_45e0_a3a4_ff92849a13280_setGlobalVar {varName varValue} {   set attrName VariableSetter_4_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_4_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter_4    INPUT  FEATURE_TYPE Tester_PASSED    OUTPUT FEATURE_TYPE VariableSetter_4_OUTPUT        @Tcl2("VariableSetter_4_ccb5df14_c248_45e0_a3a4_ff92849a13280_setGlobalVar {$(VariableSetter_4_VAR)} {yes} ")
+Tcl2 proc VariableSetter_4_33e55117_a58d_485f_91bd_bfea68caa49a13_setGlobalVar {varName varValue} {   set attrName VariableSetter_4_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_4_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter_4    INPUT  FEATURE_TYPE Tester_PASSED    OUTPUT FEATURE_TYPE VariableSetter_4_OUTPUT        @Tcl2("VariableSetter_4_33e55117_a58d_485f_91bd_bfea68caa49a13_setGlobalVar {$(VariableSetter_4_VAR)} {yes} ")
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME XMLTemplater_3 INPUT CONTROL_FEATURE FEATURE_TYPE VariableSetter_4_OUTPUT INPUT DATA_FEATURE FEATURE_TYPE XMLTemplater_3_DataFeatures RESULT_ATTR Remarks OUTPUT_XML_HEADER YES BUCKET_ATTR_NAME __xml_templater_bucket__ CONTROL_TEMPLATE_EXPR <lt>div<gt>Invalid<space>Attribute:<space>DIAMETER<lf><lt><solidus>div<gt> OUTPUT XML_DOCUMENT FEATURE_TYPE XMLTemplater_3_OUTPUT
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_2_32330ce4_5c76_4648_a5e5_db5b4dd56a250_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_2}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_2}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_2_c4139ce8_8911_43f2_b898_0b08fc5fe69313_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_2}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_2}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_2    INPUT  FEATURE_TYPE XMLTemplater_3_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT         "@Tcl2( AttributeCreator_2_32330ce4_5c76_4648_a5e5_db5b4dd56a250_attrSetter {(_invalid_features,yes)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_2    INPUT  FEATURE_TYPE XMLTemplater_3_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT         "@Tcl2( AttributeCreator_2_c4139ce8_8911_43f2_b898_0b08fc5fe69313_attrSetter {(_invalid_features,yes)} )"
 
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "GoogleStaticMapCreator GeometryExtractor_INPUT_197 Input Collector"   INPUT FEATURE_TYPE AttributeCreator_2_OUTPUT   INPUT FEATURE_TYPE AttributeCreator_OUTPUT   OUTPUT FEATURE_TYPE GoogleStaticMapCreator_GeometryExtractor_INPUT_197
+FACTORY_DEF * TeeFactory   FACTORY_NAME "GoogleStaticMapCreator GeometryExtractor_INPUT_197 Input Collector"   INPUT FEATURE_TYPE AttributeCreator_OUTPUT   INPUT FEATURE_TYPE AttributeCreator_2_OUTPUT   OUTPUT FEATURE_TYPE GoogleStaticMapCreator_GeometryExtractor_INPUT_197
 MACRO GoogleStaticMapCreator_WORKSPACE_NAME GoogleStaticMapCreator
 MACRO $(GoogleStaticMapCreator_WORKSPACE_NAME)_XFORMER_NAME GoogleStaticMapCreator
 MACRO $(GoogleStaticMapCreator_WORKSPACE_NAME)_TRANSFORMER_GROUP 
@@ -5040,7 +4930,7 @@ MACRO $(GoogleStaticMapCreator_WORKSPACE_NAME)___COMPOUND_PARAMETERS
 MACRO $(GoogleStaticMapCreator_WORKSPACE_NAME)_SUB_DOC_NAME GoogleStaticMapCreator
 DEFAULT_MACRO GoogleStaticMapCreator_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GoogleStaticMapCreator_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GoogleStaticMapCreator_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GoogleStaticMapCreator_WORKSPACE_NAME)_GeometryExtractor_INPUT_1971388432323 Input Splitter"   INPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_GeometryExtractor_INPUT_197"   OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_GeometryExtractor_INPUT_197"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GoogleStaticMapCreator_WORKSPACE_NAME)_GeometryExtractor_INPUT_1971388518673 Input Splitter"   INPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_GeometryExtractor_INPUT_197"   OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_GeometryExtractor_INPUT_197"
 # -------------------------------------------------------------------------
 
 # Wipe out the source setting if it was untouched from the default setting
@@ -5076,15 +4966,15 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_67701999_e82d_4275_ae72_87b191244d640_replacer { findText replaceText} {     set attrs [split \"_path\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_SubstringExtractor_OUTPUT"    OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_67701999_e82d_4275_ae72_87b191244d640_replacer {<comma>} {|}")
+Tcl2 proc $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_721bebdb_2293_48dc_9d48_62b98486924413_replacer { findText replaceText} {     set attrs [split \"_path\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_SubstringExtractor_OUTPUT"    OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_721bebdb_2293_48dc_9d48_62b98486924413_replacer {<comma>} {|}")
 
 # -------------------------------------------------------------------------
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_bc2a28b2_5508_47a8_a818_f237372262cf0_replacer { findText replaceText} {     set attrs [split \"_path\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_bc2a28b2_5508_47a8_a818_f237372262cf0_replacer {<space>} {<comma>}")
+Tcl2 proc $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_97bdebf8_7098_4754_b0f9_cadada80eaa713_replacer { findText replaceText} {     set attrs [split \"_path\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringReplacer_97bdebf8_7098_4754_b0f9_cadada80eaa713_replacer {<space>} {<comma>}")
 
 # -------------------------------------------------------------------------
 
@@ -5092,10 +4982,10 @@ FACTORY_DEF * TestFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAM
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_bb338094_ccf5_4a4f_9b6e_5a9316e0a2a40_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_StaticMapUrl}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5    INPUT  FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"    OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT"        @Tcl2("$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_bb338094_ccf5_4a4f_9b6e_5a9316e0a2a40_doSetAttr {@EvaluateExpression(STRING_ENCODED,http:<solidus><solidus>maps.googleapis.com<solidus>maps<solidus>api<solidus>staticmap?center=<at>Value<openparen>_x<closeparen><comma><at>Value<openparen>_y<closeparen><amp>amp<amp>amp<amp>size=200x200<amp>amp<amp>sensor=false<amp>path=color:0x0000ff|weight:5|<at>Value<openparen>_path<closeparen>,$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5)} ")
+Tcl2 proc $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_03a5f4cb_869a_4192_b755_a5e2047ff79813_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_StaticMapUrl}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5    INPUT  FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"    OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT"        @Tcl2("$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_03a5f4cb_869a_4192_b755_a5e2047ff79813_doSetAttr {@EvaluateExpression(STRING_ENCODED,http:<solidus><solidus>maps.googleapis.com<solidus>maps<solidus>api<solidus>staticmap?center=<at>Value<openparen>_x<closeparen><comma><at>Value<openparen>_y<closeparen><amp>amp<amp>amp<amp>size=200x200<amp>amp<amp>sensor=false<amp>path=color:0x0000ff|weight:5|<at>Value<openparen>_path<closeparen>,$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5)} ")
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT_1721388432323 Output Collector"   INPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT"   OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT_172"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT_1721388518673 Output Collector"   INPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT"   OUTPUT FEATURE_TYPE "$(GoogleStaticMapCreator_WORKSPACE_NAME)_StringConcatenator_5_OUTPUT_172"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GoogleStaticMapCreator_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "GoogleStaticMapCreator StringConcatenator_5_OUTPUT_172 Output Renamer/Nuker"   INPUT FEATURE_TYPE GoogleStaticMapCreator_StringConcatenator_5_OUTPUT_172   OUTPUT FEATURE_TYPE GoogleStaticMapCreator_StringConcatenator_5_OUTPUT_172
 # -------------------------------------------------------------------------
@@ -5110,13 +5000,13 @@ MACRO $(HTMLTemplate_WORKSPACE_NAME)___COMPOUND_PARAMETERS
 MACRO $(HTMLTemplate_WORKSPACE_NAME)_SUB_DOC_NAME HTMLTemplate
 DEFAULT_MACRO HTMLTemplate_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(HTMLTemplate_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(HTMLTemplate_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(HTMLTemplate_WORKSPACE_NAME)_INPUT1388432323 Input Splitter"   INPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_INPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(HTMLTemplate_WORKSPACE_NAME)_INPUT1388518673 Input Splitter"   INPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_INPUT"
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_d9e164e9_d20e_48db_b99c_1e73c4764efa0_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_htmlFull}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_d9e164e9_d20e_48db_b99c_1e73c4764efa0_doSetAttr {@EvaluateExpression(STRING_ENCODED,<lt>!DOCTYPE<space>html<gt><lf><lt>html<gt><lf><lt>head<gt><lf><space><space><lt>meta<space>charset=<quote>utf-8<quote><gt><lf><lf><space><space><lt>!--<space>Use<space>the<space>.htaccess<space>and<space>remove<space>these<space>lines<space>to<space>avoid<space>edge<space>case<space>issues.<space>More<space>info:<space>h5bp.com<solidus>i<solidus>378<space>--<gt><lf><space><space><lt>meta<space>http-equiv=<quote>X-UA-Compatible<quote><space>content=<quote>IE=edge<comma>chrome=1<quote><gt><lf><lf><space><space><lt>title<gt>Data<space>validation<space>failure<lt><solidus>title<gt><lf><space><space><lt>meta<space>name=<quote>description<quote><space>content=<quote><quote><gt><lf><lf><space><space><lt>!--<space>Mobile<space>viewport<space>optimized:<space>h5bp.com<solidus>viewport<space>--<gt><lf><space><space><lt>meta<space>name=<quote>viewport<quote><space>content=<quote>width=device-width<quote><gt><lf><lf><space><space><lt>!--<space>CSS<space>goes<space>in<space>the<space>document<space>HEAD<space>or<space>added<space>to<space>your<space>external<space>stylesheet<space>--<gt><lf><lt>style<space>type=<quote>text<solidus>css<quote><gt><lf><solidus>*<space>------------------<lf><space>styling<space>for<space>the<space>tables<space><lf><space><space><space>------------------<space><space><space>*<solidus><lf><lf><lf><lf><lf><lt><solidus>style<gt><lf><space><lf><lt><solidus>head<gt><lf><lt>body<gt><lf><at>Value<openparen>_htmlTable<closeparen><lf><lf><lt><solidus>body<gt><lf><lt><solidus>html<gt>,$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator)} ")
+Tcl2 proc $(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_093dfa57_7bd1_445b_b448_bf23b630556013_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_htmlFull}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_093dfa57_7bd1_445b_b448_bf23b630556013_doSetAttr {@EvaluateExpression(STRING_ENCODED,<lt>!DOCTYPE<space>html<gt><lf><lt>html<gt><lf><lt>head<gt><lf><space><space><lt>meta<space>charset=<quote>utf-8<quote><gt><lf><lf><space><space><lt>!--<space>Use<space>the<space>.htaccess<space>and<space>remove<space>these<space>lines<space>to<space>avoid<space>edge<space>case<space>issues.<space>More<space>info:<space>h5bp.com<solidus>i<solidus>378<space>--<gt><lf><space><space><lt>meta<space>http-equiv=<quote>X-UA-Compatible<quote><space>content=<quote>IE=edge<comma>chrome=1<quote><gt><lf><lf><space><space><lt>title<gt>Data<space>validation<space>failure<lt><solidus>title<gt><lf><space><space><lt>meta<space>name=<quote>description<quote><space>content=<quote><quote><gt><lf><lf><space><space><lt>!--<space>Mobile<space>viewport<space>optimized:<space>h5bp.com<solidus>viewport<space>--<gt><lf><space><space><lt>meta<space>name=<quote>viewport<quote><space>content=<quote>width=device-width<quote><gt><lf><lf><space><space><lt>!--<space>CSS<space>goes<space>in<space>the<space>document<space>HEAD<space>or<space>added<space>to<space>your<space>external<space>stylesheet<space>--<gt><lf><lt>style<space>type=<quote>text<solidus>css<quote><gt><lf><solidus>*<space>------------------<lf><space>styling<space>for<space>the<space>tables<space><lf><space><space><space>------------------<space><space><space>*<solidus><lf><lf><lf><lf><lf><lt><solidus>style<gt><lf><space><lf><lt><solidus>head<gt><lf><lt>body<gt><lf><at>Value<openparen>_htmlTable<closeparen><lf><lf><lt><solidus>body<gt><lf><lt><solidus>html<gt>,$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator)} ")
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(HTMLTemplate_WORKSPACE_NAME)_OUTPUT1388432323 Output Collector"   INPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_OUTPUT"   OUTPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(HTMLTemplate_WORKSPACE_NAME)_OUTPUT1388518673 Output Collector"   INPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_StringConcatenator_OUTPUT"   OUTPUT FEATURE_TYPE "$(HTMLTemplate_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(HTMLTemplate_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "HTMLTemplate OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE HTMLTemplate_OUTPUT   OUTPUT FEATURE_TYPE HTMLTemplate_OUTPUT
 # -------------------------------------------------------------------------
@@ -5132,8 +5022,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator_2    INPUT  FEATURE_TYPE 
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_6_ee4608e0_7a29_4aa9_ace7_2a841ab9b2050_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {filename}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_6    INPUT  FEATURE_TYPE UUIDGenerator_2_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_6_OUTPUT        @Tcl2("StringConcatenator_6_ee4608e0_7a29_4aa9_ace7_2a841ab9b2050_doSetAttr {@EvaluateExpression(STRING_ENCODED,c:<solidus>temp<solidus><at>Value<openparen>_uuid<closeparen>.html,StringConcatenator_6)} ")
+Tcl2 proc StringConcatenator_6_14988306_676b_405e_b0f8_63cade2e0f6813_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {filename}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_6    INPUT  FEATURE_TYPE UUIDGenerator_2_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_6_OUTPUT        @Tcl2("StringConcatenator_6_14988306_676b_405e_b0f8_63cade2e0f6813_doSetAttr {@EvaluateExpression(STRING_ENCODED,c:<solidus>temp<solidus><at>Value<openparen>_uuid<closeparen>.html,StringConcatenator_6)} ")
 
 # -------------------------------------------------------------------------
 
@@ -5159,8 +5049,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME FilenamePartExtractor_2    INPUT  FEATU
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_fd738a11_76d3_4c47_994e_1ea5f39057b90_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {fail_email_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE FilenamePartExtractor_2_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_fd738a11_76d3_4c47_994e_1ea5f39057b90_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf>email_to:<quote><at>Value<openparen>email_from_global<closeparen><quote><comma><lf>email_attachment:<space><quote><at>Value<openparen>filename<closeparen><quote><comma><lf>email_subject:<space><quote>QA<space>for<space>file<space><at>Value<openparen>submitted_file<closeparen><space>failed!<quote><comma><lf>subscriber_content:<space><quote>File<space><at>Value<openparen>submitted_file<closeparen><space>has<space>errors<space>and<space>therefore<space>has<space>NOT<space>been<space>loaded<space>into<space>the<space>central<space>repository<space>database.<space>See<space>the<space>attached<space>html<space>file<space>for<space>details<space>of<space>the<space>errors.<quote><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_fac7d177_41af_472f_a23f_50eddaf5b54f13_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {fail_email_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE FilenamePartExtractor_2_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_fac7d177_41af_472f_a23f_50eddaf5b54f13_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf>email_to:<quote><at>Value<openparen>email_from_global<closeparen><quote><comma><lf>email_attachment:<space><quote><at>Value<openparen>filename<closeparen><quote><comma><lf>email_subject:<space><quote>QA<space>for<space>file<space><at>Value<openparen>submitted_file<closeparen><space>failed!<quote><comma><lf>subscriber_content:<space><quote>File<space><at>Value<openparen>submitted_file<closeparen><space>has<space>errors<space>and<space>therefore<space>has<space>NOT<space>been<space>loaded<space>into<space>the<space>central<space>repository<space>database.<space>See<space>the<space>attached<space>html<space>file<space>for<space>details<space>of<space>the<space>errors.<quote><lf><closecurly>,StringConcatenator_3)} ")
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "StringConcatenator_3 OUTPUT Splitter"   INPUT FEATURE_TYPE StringConcatenator_3_OUTPUT   OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT_0_s0FObdPiC5U=   OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT_1_s0FObdPiC5U=
 # -------------------------------------------------------------------------
@@ -5176,10 +5066,141 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME FMEServerNotifier_2    INPUT  FEATURE_T
 FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier_2 OUTPUT Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_2_OUTPUT
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureTypeFilter_water_distribution_lines_0_Zo89jREMua8= -> STEWART.WATERLINES Correlator"    INPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_0_Zo89jREMua8=
+FACTORY_DEF * SortFactory    FACTORY_NAME FeatureHolder    INPUT  FEATURE_TYPE FeatureReader_water_distribution_lines_1_xkQNYCcvkEs=    OUTPUT SORTED FEATURE_TYPE FeatureHolder_OUTPUT
+
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "AttributeCreator_3_OUTPUT -> STEWART.WATERLINES Correlator"    INPUT FEATURE_TYPE AttributeCreator_3_OUTPUT
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+MACRO VariableRetriever_VAR _invalidFeatures
+INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_VAR $(WB_CURRENT_CONTEXT)__invalidFeatures}; };
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYPE FeatureHolder_OUTPUT    OUTPUT FEATURE_TYPE VariableRetriever_OUTPUT        @GlobalVariable("$(VariableRetriever_VAR)",fme_result_attribute,_invalidFeatures)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester_3    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    TEST "@Value(_invalidFeatures)" != "yes"    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_3_PASSED
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Tester_3 PASSED Splitter"   INPUT FEATURE_TYPE Tester_3_PASSED   OUTPUT FEATURE_TYPE Tester_3_PASSED_0_i7bN5VlX29Q=   OUTPUT FEATURE_TYPE Tester_3_PASSED_1_i7bN5VlX29Q=
+# -------------------------------------------------------------------------
+
+Tcl2 proc AttributeCreator_4_d707fcf1_cacc_45b7_befb_da27111dbcba13_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_4}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_4}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_4    INPUT  FEATURE_TYPE Tester_3_PASSED_1_i7bN5VlX29Q=    OUTPUT FEATURE_TYPE AttributeCreator_4_OUTPUT         "@Tcl2( AttributeCreator_4_d707fcf1_cacc_45b7_befb_da27111dbcba13_attrSetter {(fme_db_operation,INSERT)} )"
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * SortFactory    FACTORY_NAME FeatureHolder_2    INPUT  FEATURE_TYPE AttributeCreator_4_OUTPUT    OUTPUT SORTED FEATURE_TYPE FeatureHolder_2_OUTPUT
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc Counter_9326949b_b0f2_47ea_99e7_70ebcbbdc4d313_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Global} == {Local} }    {       set xFormName [FME_EncodeText {Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME Counter    INPUT  FEATURE_TYPE FeatureHolder_2_OUTPUT    OUTPUT FEATURE_TYPE Counter_OUTPUT         "PRIMARYINDEX" @Count(fme_encoded,@Tcl2("Counter_9326949b_b0f2_47ea_99e7_70ebcbbdc4d313_createDomain {_PrimaryIndex}"), 0)
+
+# -------------------------------------------------------------------------
+Lookup FeatureTypeFilter_Lut   water_distribution_lines ok   water_meters ok   water_distribution_nodes ok   "" notok   ENCODED
+
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureTypeFilter    INPUT  FEATURE_TYPE Counter_OUTPUT    TEST @Lookup(FeatureTypeFilter_Lut,fme_feature_type,ENCODED_ATTR) == "ok"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(FeatureTypeFilter_&fme_feature_type)    OUTPUT FAILED FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureTypeFilter_BlankFilter    INPUT FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>    TEST @Value(fme_feature_type) == ""    OUTPUT PASSED FEATURE_TYPE FeatureTypeFilter_<BLANK>    OUTPUT FAILED FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter water_distribution_lines Splitter"   INPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines   OUTPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_0_Zo89jREMua8=   OUTPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_1_Zo89jREMua8=
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter water_meters Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_water_meters
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter water_distribution_nodes Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_nodes
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter <BLANK> Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_<BLANK>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureTypeFilter <UNFILTERED> Output Nuker"   INPUT FEATURE_TYPE FeatureTypeFilter_<UNFILTERED>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCopier    INPUT  FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_0_Zo89jREMua8=    OUTPUT FEATURE_TYPE AttributeCopier_OUTPUT         @CopyAttributes(email_attach,email_publisher_attachment{0})
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO __StatisticsCalculator_f6ceb49e_baff_48c8_a1af_b35a6f9504df13_GROUP_BY
+MACRO __StatisticsCalculator_f6ceb49e_baff_48c8_a1af_b35a6f9504df13_GROUP_BY email_attach
+DYNAMIC_FUNCTION_CONFIGURATION Python FMEOBJECTS
+DYNAMIC_FUNCTION_CONFIGURATION Python import StatisticsCalculator
+DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    'StatisticsCalculator',{     'GROUP_BY':FME_MacroValues['__StatisticsCalculator_f6ceb49e_baff_48c8_a1af_b35a6f9504df13_GROUP_BY'],     'STATS_ATTR':'PRIMARYINDEX',     'MIN_ATTR':'_min',     'MAX_ATTR':'_max',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'MODE_ATTR':'_mode',     None:None})"
+FACTORY_DEF * TeeFactory    FACTORY_NAME StatisticsCalculator_Processor    INPUT  FEATURE_TYPE AttributeCopier_OUTPUT    OUTPUT FEATURE_TYPE __ORIGINAL__         @Python(StatisticsCalculator.recordFeature,StatisticsCalculator)
+FACTORY_DEF * CreationFactory    FACTORY_NAME StatisticsCalculator_Creator     CREATE_AT_END     NUMBER_TO_CREATE 1     OUTPUT FEATURE_TYPE __SINGLE_GUY__        @SupplyAttributes(StatisticsCalculator_SUMMARY_STATS,True)
+FACTORY_DEF * SortFactory    FACTORY_NAME StatisticsCalculator_Outputter    INPUT FEATURE_TYPE __SINGLE_GUY__    OUTPUT SORTED FEATURE_TYPE __SINGLE_GUY__       @Python(StatisticsCalculator.summarizeStatistics,StatisticsCalculator,__SINGLE_GUY__)
+FACTORY_DEF * ElementFactory    FACTORY_NAME StatisticsCalculator_Exploder    INPUT FEATURE_TYPE __SINGLE_GUY__        StatisticsCalculator_SUMMARY_STATS True        @RemoveAttributes(StatisticsCalculator_SUMMARY_STATS)    LIST_NAME StatisticsCalculator_stats{}    MODE LEAN_AND_MEAN    CLONE_GEOMETRY no    OUTPUT ELEMENT FEATURE_TYPE __SINGLE_GUY__
+FACTORY_DEF * TestFactory    FACTORY_NAME StatisticsCalculator_FinalJudge    INPUT FEATURE_TYPE __ORIGINAL__    INPUT FEATURE_TYPE __SINGLE_GUY__    TEST @FeatureType() == __SINGLE_GUY__    OUTPUT PASSED FEATURE_TYPE StatisticsCalculator_STATISTICS
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc AttributeCreator_5_2d626a28_638f_4ee4_b5ea_54ccf2f3df2513_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_5}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_5}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_5    INPUT  FEATURE_TYPE StatisticsCalculator_STATISTICS    OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT         "@Tcl2( AttributeCreator_5_2d626a28_638f_4ee4_b5ea_54ccf2f3df2513_attrSetter {(Remarks,Load<space>Complete<space>-<space>Data<space>Validation<space>was<space>Successful,FEATURE_ID,<space>,WNM_TYPE,,DIAMETER,)} )"
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc TimeStamper_formatGetter { inVal } {    if { [string compare $inVal {FME Date/Time (^Y^m^d^H^M^S)}] == 0 } {       return {^Y^m^d^H^M^S};    } elseif { [string compare $inVal {FME Date (^Y^m^d)}] == 0} {       return {^Y^m^d};    } elseif { [string compare $inVal {FME Time (^H^M^S)}] == 0} {       return {^H^M^S};    } elseif { [string compare $inVal {XML Date (^Y-^m-^d)}] == 0} {       return {^Y-^m-^d};    } elseif { [string compare $inVal {XML DateTime (^Y-^m-^dT^H:^M:^S)}] == 0} {       return {^Y-^m-^dT^H:^M:^S};    } elseif { [string compare $inVal {XML Time (^H:^M:^S)}] == 0} {       return {^H:^M:^S};    } elseif { [string compare $inVal {Locale Date (^c)}] == 0} {       return {^c};    };    return $inVal; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME TimeStamper    INPUT  FEATURE_TYPE AttributeCreator_5_OUTPUT    OUTPUT FEATURE_TYPE TimeStamper_OUTPUT         @SupplyAttributes(ENCODED, INSTALLED, @Timestamp(@Tcl2("TimeStamper_formatGetter {^x } ")))
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc TimeStamper_2_formatGetter { inVal } {    if { [string compare $inVal {FME Date/Time (^Y^m^d^H^M^S)}] == 0 } {       return {^Y^m^d^H^M^S};    } elseif { [string compare $inVal {FME Date (^Y^m^d)}] == 0} {       return {^Y^m^d};    } elseif { [string compare $inVal {FME Time (^H^M^S)}] == 0} {       return {^H^M^S};    } elseif { [string compare $inVal {XML Date (^Y-^m-^d)}] == 0} {       return {^Y-^m-^d};    } elseif { [string compare $inVal {XML DateTime (^Y-^m-^dT^H:^M:^S)}] == 0} {       return {^Y-^m-^dT^H:^M:^S};    } elseif { [string compare $inVal {XML Time (^H:^M:^S)}] == 0} {       return {^H:^M:^S};    } elseif { [string compare $inVal {Locale Date (^c)}] == 0} {       return {^c};    };    return $inVal; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME TimeStamper_2    INPUT  FEATURE_TYPE TimeStamper_OUTPUT    OUTPUT FEATURE_TYPE TimeStamper_2_OUTPUT         @SupplyAttributes(ENCODED, INSTALLEDtime, @Timestamp(@Tcl2("TimeStamper_2_formatGetter {^X} ")))
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_20d8cb1a_2d90_4122_9075_c7a5b2182cdb13_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_result}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator    INPUT  FEATURE_TYPE TimeStamper_2_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_OUTPUT        @Tcl2("StringConcatenator_20d8cb1a_2d90_4122_9075_c7a5b2182cdb13_doSetAttr {@EvaluateExpression(STRING_ENCODED,<lt>!doctype<space>html<gt><lf><lt>head<gt><lf><space><space><lt>meta<space>charset=<quote>utf-8<quote><gt><lf><lf><space><space><lt>!--<space>Use<space>the<space>.htaccess<space>and<space>remove<space>these<space>lines<space>to<space>avoid<space>edge<space>case<space>issues.<space>More<space>info:<space>h5bp.com<solidus>i<solidus>378<space>--<gt><lf><space><space><lt>meta<space>http-equiv=<quote>X-UA-Compatible<quote><space>content=<quote>IE=edge<comma>chrome=1<quote><gt><lf><lf><space><space><lt>title<gt><lt><solidus>title<gt><lf><space><space><lt>meta<space>name=<quote>description<quote><space>content=<quote><quote><gt><lf><lf><space><space><lt>!--<space>Mobile<space>viewport<space>optimized:<space>h5bp.com<solidus>viewport<space>--<gt><lf><space><space><lt>meta<space>name=<quote>viewport<quote><space>content=<quote>width=device-width<quote><gt><lf><lf><lf><lt><solidus>head<gt><lf><lt>body<gt><lf><tab><at>Value<openparen>Remarks<closeparen><lt>br<gt>Date<space>Loaded:<space><space><at>Value<openparen>INSTALLED<closeparen><space><space><at>Value<openparen>INSTALLEDtime<closeparen><lt>br<gt>Number<space>of<space>Features<space>Added:<space><at>Value<openparen>_count<closeparen><lf><lt><solidus>body<gt><lf><lt><solidus>html<gt>,StringConcatenator)} ")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE StringConcatenator_OUTPUT    OUTPUT FEATURE_TYPE UUIDGenerator_OUTPUT         "_uuid" @UUID()
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_4_a7940590_68b3_4be0_83b5_07e5a1fd69f813_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {filename}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_4    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_4_OUTPUT        @Tcl2("StringConcatenator_4_a7940590_68b3_4be0_83b5_07e5a1fd69f813_doSetAttr {@EvaluateExpression(STRING_ENCODED,c:<solidus>temp<solidus><at>Value<openparen>_uuid<closeparen>.html,StringConcatenator_4)} ")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileWriter    INPUT  FEATURE_TYPE StringConcatenator_4_OUTPUT    OUTPUT FEATURE_TYPE AttributeFileWriter_OUTPUT         @File(DestWriteSrcRead,_result,"@Value(filename)",fme-system)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME FilenamePartExtractor    INPUT  FEATURE_TYPE AttributeFileWriter_OUTPUT    OUTPUT FEATURE_TYPE FilenamePartExtractor_OUTPUT         @SupplyAttributes("submitted_file",@Filenamepart(FILENAME,@Value("email_attach")))
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+MACRO VariableRetriever_5_VAR email_from_global
+INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_5_VAR $(WB_CURRENT_CONTEXT)_email_from_global}; };
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever_5    INPUT  FEATURE_TYPE FilenamePartExtractor_OUTPUT    OUTPUT FEATURE_TYPE VariableRetriever_5_OUTPUT        @GlobalVariable("$(VariableRetriever_5_VAR)",fme_result_attribute,email_from_global)
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_2_49158917_2f88_4815_ba04_4ab1fae3b58813_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {success_email_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE VariableRetriever_5_OUTPUT    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_49158917_2f88_4815_ba04_4ab1fae3b58813_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf>email_to:<quote><at>Value<openparen>email_from_global<closeparen><quote><comma><lf>email_attachment:<space><quote><at>Value<openparen>filename<closeparen><quote><comma><lf>email_subject:<space><quote>QA<space>for<space>file<space><at>Value<openparen>submitted_file<closeparen><space>succeeded!<quote><comma><lf>subscriber_content:<space><quote>File<space><at>Value<openparen>submitted_file<closeparen><space>has<space>been<space>loaded<space>into<space>the<space>central<space>repository<space>database.<quote><lf><closecurly>,StringConcatenator_2)} ")
+
+# -------------------------------------------------------------------------
+
+DYNAMIC_FUNCTION_CONFIGURATION Http    FMEServerNotifier_http_request    REQUEST_HEADER ""    HTTP_USERNAME "$(HTTP_AUTH_USERNAME)"    HTTP_PASSWORD "$(HTTP_AUTH_PASSWORD)"    HTTP_AUTHMETHOD Basic    UPLOAD_BODY success_email_content    UPLOAD_CONTENT_TYPE text/plain    USE_RECV_HEADER_ENCODING yes    SAVED_HEADERS_ATTR _headers    STATUS_CODE_ATTR "_http_status_code"    CONTINUE_ON_ERROR yes    USE_COOKIES no
+FACTORY_DEF * TeeFactory    FACTORY_NAME FMEServerNotifier    INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    OUTPUT FEATURE_TYPE FMEServerNotifier_OUTPUT         @Http(POST,@EvaluateExpression(STRING_ENCODED,localhost<solidus>fmerest<solidus>notifier<solidus>topics<solidus>cad_waterqa_success<solidus>publish.json,HTTPUploader), _url_contents, FMEServerNotifier_http_request)
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier OUTPUT Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_OUTPUT
+# -------------------------------------------------------------------------
+
+INCLUDE [ puts "MACRO REAL_RATE [expr 1 * -1 ]" ]
+FACTORY_DEF * SamplingFactory    FACTORY_NAME Sampler    SAMPLE_RATE $(REAL_RATE)    INPUT  FEATURE_TYPE Tester_3_PASSED_0_i7bN5VlX29Q=    OUTPUT SAMPLED FEATURE_TYPE ___SAMPLED___
+# This TeeFactory is needed because Sampler will still output features if it has no OUTPUT clauses specified.
+# This way we behave nicely even if there are no output connections on the transformer. See PR#28886.
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME Sampler_Sampled    INPUT FEATURE_TYPE ___SAMPLED___    OUTPUT FEATURE_TYPE Sampler_SAMPLED
+
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc AttributeCreator_3_eb7eadab_d561_47a9_9815_9edb91d0154e13_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_3}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_3}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_3    INPUT  FEATURE_TYPE Sampler_SAMPLED    OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT         "@Tcl2( AttributeCreator_3_eb7eadab_d561_47a9_9815_9edb91d0154e13_attrSetter {(fme_db_operation,DELETE,fme_where,TILE<space>=<space><apos>N25<apos>)} )"
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureTypeFilter_water_distribution_lines_1_Zo89jREMua8= -> SUPPORT.WATERLINES Correlator"    INPUT FEATURE_TYPE FeatureTypeFilter_water_distribution_lines_1_Zo89jREMua8=    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,ORACLE8I) @EvaluateExpression(ATTR_CREATE_EXPR,BULK_LOAD,0, ATTR_SET)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,SUPPORT.WATERLINES)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "AttributeCreator_3_OUTPUT -> SUPPORT.WATERLINES Correlator"    INPUT FEATURE_TYPE AttributeCreator_3_OUTPUT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,ORACLE8I) @EvaluateExpression(ATTR_CREATE_EXPR,BULK_LOAD,0, ATTR_SET)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,SUPPORT.WATERLINES)
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
@@ -5188,3 +5209,4 @@ FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   IN
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
+ORACLE8I_1_DEF SUPPORT.WATERLINES   oracle_model                 object   oracle_create_indices        No   oracle_levels                0   oracle_numtiles              8   oracle_min_x                 -180   oracle_min_y                 -90   oracle_min_z                 0   oracle_min_m                 0   oracle_max_x                 180   oracle_max_y                 90   oracle_max_z                 0   oracle_max_m                 0   oracle_x_tol                 0.05   oracle_y_tol                 0.05   oracle_z_tol                 0.05   oracle_m_tol                 0.05   oracle_dim                   2   oracle_default_contains_measures No   oracle_default_geom_column   GEOM   oracle_drop_table            No   ANNO_DIAM                    varchar2(255)   COMPKEY                      number(38,0)   COMPTYPE                     number(38,0)   DIAMETER                     varchar2(255)   DRAW                         number(38,0)   FEATURE_ID                   varchar2(25)   LEAD_MAIN_                   number(38,0)   MATERIAL                     varchar2(8)   PRIMARYINDEX                 number(38,0)   PROJECT                      varchar2(255)   PR_ZONE                      varchar2(4)   STATUS                       varchar2(3)   SYMCODE                      number(38,0)   SYMCODE2                     number(38,0)   TILE                         varchar2(4)   WNM_TYPE                     varchar2(8)   YEAR_INSTA                   number(38,0)   AUTOCAD_ELEVATION            number(38,0)   BULK_LOAD                    number(38,0)

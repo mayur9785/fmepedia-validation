@@ -1,4 +1,5 @@
 --Create Trigger
+SET SCAN OFF
 
 create or replace
 TRIGGER WATERLINES_INSERT_TEMP 
@@ -12,7 +13,7 @@ BEGIN
      dbms_output.put_line(vMsg);
     END IF;
 END WATERLINES_INSERT_TEMP;
-
+/
 --Create Function
 --The request server address is currently set to localhost and may 
 --need to be changed to match your own server name
@@ -52,7 +53,8 @@ BEGIN
     
     dbms_output.put_line(message);
     -- because of the length it is necessary to send it over a POST request
-    req := utl_http.begin_request('http://localhost/fmejobsubmitter/fmepedia_demos/D001%20-%20pushertrigger_collection.fmw','POST');
+    --req := utl_http.begin_request('http://jabba/fmejobsubmitter/fmepedia_demos/D001%20-%20pushertrigger_collection.fmw','POST');
+    req := utl_http.begin_request('http://jabba/fmejobsubmitter/Sample/austinApartments.fmw','POST');
     utl_http.set_header(req, 'User-Agent', 'Mozilla/4.0');
     UTL_HTTP.SET_HEADER(req,'Content-Type','application/x-www-form-urlencoded');
     utl_http.set_header(req, 'content-length', length(message));
