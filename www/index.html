@@ -110,7 +110,7 @@
 		var features = 0;
 		
 		/*** FME Server WebSocket initialization ***/
-		var conn = new WebSocket('ws://jabba:7078/websocket');
+		var conn = new WebSocket('ws://' + fmeserverurl + ':7078/websocket');
 		
 		var connmsg = null;
 		
@@ -247,8 +247,8 @@
 		document.getElementById('dbstatus').setAttribute("class","label label-warning");
 		document.getElementById('dbstatus').textContent = "Waiting for answer...";
 		
-		var xhReq = createXMLHttpRequest();
-		pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/fmepedia_demos/D001 - ResetOracleTable.fmw"
+		var xhReq = new XMLHttpRequest();
+		pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/cadqa/D001 - ResetPostGISTable.fmw"
 		pHttpMethod = "GET"
 		xhReq.open(pHttpMethod, pUrlBase, true);
 		xhReq.onreadystatechange = onResponse;
