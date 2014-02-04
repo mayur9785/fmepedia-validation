@@ -53,5 +53,5 @@ CREATE INDEX "WATERLINES_geom_1388688556114"
 
   -- DROP TABLE "TEMP_IDS";
 CREATE TABLE temp_ids 
-   (feature_id character varying(25));
+   (primaryindex numeric(38,0) NOT NULL);
 
