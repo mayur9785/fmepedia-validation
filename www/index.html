@@ -29,9 +29,6 @@
 	<!-- Google Maps -->
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-	<!-- Pusher -->
-	<script src="http://js.pusher.com/1.11/pusher.min.js"></script>
-	
 	<!-- Stylesheet for demo/tutorial -->
 	<link rel="stylesheet" href="css/index.css">
 	
@@ -248,7 +245,7 @@
 		document.getElementById('dbstatus').textContent = "Waiting for answer...";
 		
 		var xhReq = new XMLHttpRequest();
-		pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/cadqa/D001 - ResetPostGISTable.fmw"
+		pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/validation/reset-postgis-table.fmw"
 		pHttpMethod = "GET"
 		xhReq.open(pHttpMethod, pUrlBase, true);
 		xhReq.onreadystatechange = onResponse;

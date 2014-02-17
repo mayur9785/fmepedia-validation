@@ -7,6 +7,5 @@
 // Example for using in JavaScript
 // pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/Demos/D014-ResetOracleTable.fmw"
 
-var fmeserverurl = "jabba";
-//var token = "b75f8edfb40f95a8e41e11b293da7813e7fb9b06" Tested and failed on Nov 13, 2013 SM
-var token = "7ef84feb2d8553c89e3f803052c340bd252b0e08"
+var fmeserverurl = "yourFMEServer";
+var token = "yourFMEserverToken";
