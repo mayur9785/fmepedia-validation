@@ -26,14 +26,8 @@ CREATE TABLE "WATERLINES"
   year_insta numeric(38,0),
   autocad_elevation numeric(38,0),
   bulk_load numeric(38,0),
-  geom geometry,
   CONSTRAINT pkey_feature PRIMARY KEY (primaryindex )
-)
-WITH (
-  OIDS=FALSE
 );
-ALTER TABLE "WATERLINES"
-  OWNER TO postgres;
   
 -- EPSG 2277 = Texas CF-83
 SELECT AddGeometryColumn('WATERLINES','geom',2277,'LINESTRING',2);
@@ -53,5 +47,5 @@ CREATE INDEX "WATERLINES_geom_1388688556114"
 
   -- DROP TABLE "TEMP_IDS";
 CREATE TABLE temp_ids 
-   (feature_id character varying(25));
+   (primaryindex numeric(38,0) NOT NULL));
 

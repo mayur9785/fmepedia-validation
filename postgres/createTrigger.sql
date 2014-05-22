@@ -7,7 +7,7 @@ DECLARE
 	
 BEGIN 
 	IF (new.bulk_load <> 1 OR new.bulk_load IS NULL) THEN
-		INSERT INTO temp_ids VALUES (new.feature_id);
+		INSERT INTO temp_ids VALUES (new.primaryindex);
 	END IF;
 	RETURN NULL;
 END 

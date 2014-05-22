@@ -27,14 +27,14 @@
 	<link href="libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   
 	<!-- Google Maps -->
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
 
 	<!-- Stylesheet for demo/tutorial -->
 	<link rel="stylesheet" href="css/index.css">
 	
-	<!-- Generic server functions -->
-	<script type="text/javascript" src="global_var.js"></script>
-	<script src="js/FMEServer.js" type="text/javascript"></script>
+	<!-- FME Server functions -->
+	<script type="text/javascript" src="js/global_var.js"></script>
+	<script type="text/javascript" src="http://api.fmeserver.com/js/v1/FMEServer.min.js"></script>
 
 	<!-- Demo-specific JavaScript -->
 	<!-- <script src="js/myDemoCode.js" type="text/javascript"></script> -->
@@ -101,31 +101,31 @@
       </div>
 	</div>
 	<script type="text/javascript">
-	function initialize() {
-		var polygonArray = [];
-		var map;
-		var features = 0;
-		
-		/*** FME Server WebSocket initialization ***/
-		var conn = new WebSocket('ws://' + fmeserverurl + ':7078/websocket');
-		
-		var connmsg = null;
-		
-		/*** connect to server output stream ***/
-		conn.onopen = function() {
-			connmsg = '{ ws_op : "open", ws_stream_id : "cadqa" }';
-			conn.send(connmsg);
-		}
-		
-		/*** Initialize the map ***/
+	var polygonArray = [];
+	var map, fmes, conn;
+	var features = 0;
 
+	function initialize() {
+		/*** Initialize the map ***/
 		var myOptions = {
 			center : new google.maps.LatLng(30.302793482150715, -97.65678371362306),
 			zoom : 15,
 			mapTypeId : google.maps.MapTypeId.ROADMAP
 		};
+
 		map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+	};
+
+	// Wait for load
+	window.onload = function(){
 		
+		fmes = new FMEServer({
+			server : "http://"+fmeserverurl,
+			token : "fb1c3ee6828e6814c75512dd4770a02e73d913b8"
+		});
+	
+		/*** FME Server WebSocket initialization ***/
+		conn = fmes.getWebSocketConnection("cadqa");
 		
 		/*** Reacting to incoming messages on WebSocket ***/
 		conn.onmessage = function(event) {
@@ -139,7 +139,6 @@
 				case 'i':
 
 					var polyCoords = [];
-
 					var coords = jsonFeature.features[0].coordinates;
 
 					for(var j = 0; j < coords.length; j++) {
@@ -175,9 +174,7 @@
 						}
 					}
 					
-					
 					var polyCoords = [];
-
 					var coords = jsonFeature.features[0].coordinates[0];
 
 					for(var j = 0; j < coords.length; j++) {
@@ -214,36 +211,16 @@
 					}
 					break;
 				default:
-
 			}
 		}
-		
-	}
-	
-	// Function to send a XML HTTP request
-	function createXMLHttpRequest() {
-		try {
-			return new XMLHttpRequest();
-		} catch (e) {
-		}
-		try {
-			return new ActiveXObject("Msxml2.XMLHTTP");
-		} catch (e) {
-		}
-		alert("XMLHttpRequest not supported");
-		return null;
-	}
-	
-	function onResponse() {
-		document.getElementById('dbstatus').setAttribute("class","label label-success");
-		document.getElementById('dbstatus').textContent = "Database ready";
-	}
+	};
 	
 	// This function calls the workspace to reset the database
 	function deleteDb() {
 		document.getElementById('dbstatus').setAttribute("class","label label-warning");
 		document.getElementById('dbstatus').textContent = "Waiting for answer...";
 		
+<<<<<<< HEAD
 		var xhReq = new XMLHttpRequest();
 		pUrlBase = "http://" + fmeserverurl + "/fmejobsubmitter/validation/reset-postgis-table.fmw"
 		pHttpMethod = "GET"
@@ -251,6 +228,20 @@
 		xhReq.onreadystatechange = onResponse;
 		xhReq.send(null);
 	}	
+=======
+		// Object required for submitSyncJob method
+		// For this case we are using server default values, but we still need to
+		// pass an empty object to the method.
+		var params = {};
+
+		fmes.submitSyncJob("validation", "reset-postgis-table.fmw", params, function(json){
+			document.getElementById('dbstatus').setAttribute("class","label label-success");
+			document.getElementById('dbstatus').textContent = "Database ready";
+		});
+	}
+
+	initialize();
+>>>>>>> master
 	</script>
 </body>
 

@@ -1,8 +1,10 @@
--- 5. Create HTTP function
+-- Create HTTP function
 -- It seems like there is no built-in function in PL/pgSQL (2012-09-25). Therefore, a small PL/Python script is used to send the request. All further logic is written in PL/pgSQL.
+CREATE EXTENSION plpythonu;
+
 CREATE OR REPLACE FUNCTION send_request(url text, param1 text) RETURNS text AS
 '
-# Documentation fo httplib: http://docs.python.org/library/httplib.html
+# Documentation for httplib: http://docs.python.org/library/httplib.html
 import httplib, urllib
 # http://stackoverflow.com/questions/449775/how-can-i-split-a-url-string-up-into-separate-parts-in-python
 from urlparse import urlparse
@@ -29,7 +31,7 @@ BEGIN
 	INTO message
 	FROM temp_ids;
 
-	PERFORM send_request('http://SWISSCHEESE/fmejobsubmitter/trigger/postgis_single_logger.fmw',message);
+	PERFORM send_request('http://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw',message);
 
 	RETURN 'Y';
 
