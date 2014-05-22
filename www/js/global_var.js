@@ -1,1 +1,0 @@
-var fmeserverurl = "fmepedia2014-safe-software.fmecloud.com";
