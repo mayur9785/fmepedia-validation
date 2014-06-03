@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="css/index.css">
 	
 	<!-- FME Server Javascript API -->
-	<script type="text/javascript" src="http://api.fmeserver.com/js/v1/FMEServer.min.js"></script>
+	<script type="text/javascript" src="http://api.fmeserver.com/js/v1.1/FMEServer.js"></script>
 	<script type="text/javascript">
 		// Required for FME Server Connection Object and Email
 		var fmeserverurl = "fmepedia2014-safe-software.fmecloud.com";
@@ -101,7 +101,7 @@
 	</div>
 	<script type="text/javascript">
 		var polygonArray = [];
-		var map, fmes, conn;
+		var map, conn;
 		var features = 0;
 
 		function initialize() {
@@ -118,13 +118,13 @@
 		// Wait for load
 		window.onload = function(){
 			
-			fmes = new FMEServer({
+			FMEServer.init({
 				server : "https://"+fmeserverurl,
 				token : "fb1c3ee6828e6814c75512dd4770a02e73d913b8"
 			});
 		
 			/*** FME Server WebSocket initialization ***/
-			conn = fmes.getWebSocketConnection("cadqa");
+			conn = FMEServer.getWebSocketConnection("cadqa");
 			
 			/*** Reacting to incoming messages on WebSocket ***/
 			conn.onmessage = function(event) {
@@ -224,7 +224,7 @@
 			// pass an empty object to the method.
 			var params = {};
 
-			fmes.submitSyncJob("validation", "reset-postgis-table.fmw", params, function(json){
+			FMEServer.submitSyncJob("validation", "reset-postgis-table.fmw", params, function(json){
 				document.getElementById('dbstatus').setAttribute("class","label label-success");
 				document.getElementById('dbstatus').textContent = "Database ready";
 			});
