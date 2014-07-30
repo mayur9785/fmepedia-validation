@@ -11,7 +11,7 @@
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="-642 204"
+#! VIEW_POSITION="-636 198"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -29,13 +29,13 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="8b9002ba-fe9c-47df-829a-081674553c49,319e8836-8c18-4ab4-ba7f-b5975d7b0b5b,e90370f9-d442-4f5e-9fc5-a5d705b8a734,1b075ead-c7d5-44bd-a200-53d00e0622a6,7e4afecf-caa1-4e02-a811-625fcd1becd2,11469036-7788-47c2-b2c6-26e682863921,e8c0d595-23c9-4be2-b753-14a06e37a9fb,698bd7bb-c8c2-4c30-827d-96942dede313,5e3cd113-05ac-4fae-a3f5-6ea205976707,19e7df68-21c9-4991-8f9d-0ef29794549d,1ad42bfe-b9e4-4856-b657-acac4e2446ac,be6e18bd-57f3-4719-9d42-7ad66dcd507c,871e1f0c-bc8f-4f4a-8a61-53ce72a5e5b7,858c12f0-9051-4c13-9d73-f52885a88833,1d890200-51d5-48d3-81cb-c9da6786aaf3"
+#! FME_DOCUMENT_PRIORGUID="8b9002ba-fe9c-47df-829a-081674553c49,319e8836-8c18-4ab4-ba7f-b5975d7b0b5b,e90370f9-d442-4f5e-9fc5-a5d705b8a734,1b075ead-c7d5-44bd-a200-53d00e0622a6,7e4afecf-caa1-4e02-a811-625fcd1becd2,11469036-7788-47c2-b2c6-26e682863921,e8c0d595-23c9-4be2-b753-14a06e37a9fb,698bd7bb-c8c2-4c30-827d-96942dede313,5e3cd113-05ac-4fae-a3f5-6ea205976707,19e7df68-21c9-4991-8f9d-0ef29794549d,1ad42bfe-b9e4-4856-b657-acac4e2446ac,be6e18bd-57f3-4719-9d42-7ad66dcd507c,871e1f0c-bc8f-4f4a-8a61-53ce72a5e5b7,858c12f0-9051-4c13-9d73-f52885a88833,1d890200-51d5-48d3-81cb-c9da6786aaf3,93de832e-9392-459b-8b2f-a26090d66e0d,71168907-be45-4238-a22e-9c7ec37e71e3"
 #! DOC_TOP_LEFT="-60 -1038"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-07-30T14:10:21"
+#! LAST_SAVE_DATE="2014-07-30T16:44:18"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -46,7 +46,7 @@
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="2929 1158"
-#! FME_DOCUMENT_GUID="93de832e-9392-459b-8b2f-a26090d66e0d"
+#! FME_DOCUMENT_GUID="75789e6f-84c8-4260-a6e5-4fa5866a7d05"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -294,6 +294,37 @@
 #! <FMESERVER>
 #! <SERVICES>
 #! <SERVICE
+#! NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE="TEXTLINE_1"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! <SERVICE
 #! NAME="fmenotification"
 #! >
 #! <PROPERTIES>
@@ -341,7 +372,7 @@
 #! </SERVICE>
 #! </SERVICES>
 #! <REPOSITORY
-#! NAME="cadqa"
+#! NAME="validation"
 #! />
 #! <ITEM
 #! NAME="cad-upload.fmw"
@@ -365,7 +396,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE LOOKUP_CHOICE_OR_ATTR EMAIL_TYPE IMAP,imap%SMTP,email Type of email publisher:"
-#! DEFAULT_VALUE="imap"
+#! DEFAULT_VALUE="email"
 #! IS_STAND_ALONE="true"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -396,7 +427,7 @@
 #! BOTTOM_RIGHT="1299 -1239"
 #! STICKY="true"
 #! COLOUR="0.356863,0.027451,0.109804"
-#! CONTENTS="40 41 24 142 31 26 27 39 28 140 34 117 33 29 23 116 "
+#! CONTENTS="117 41 140 40 34 29 33 28 24 116 26 27 31 39 23 142 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -496,17 +527,17 @@
 #! <XFORM_ATTR ATTR_NAME="_timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszIDAuMYg/Xt6RsNosDJqn7iAVoiLE0vzOY6xcnJ1zoTz9+LGAXcTF4jZjRLh1G1CNbTMwCIQ66/9kHHXAaCTEvBzWtYpXh6g5x7m8a8JGwDia8bDM1C9Mi1qsvgX3xS7xerElxuKORGD3ND3r5/jkvJFD+0UUlHWBsaXDb8aUtlap9cp/OcagesVCFxcxiZGGM4DRUrjnFCG9hsJFv9Ut0nqPFub9/UFJkTCqqmbeQ3ok1I4oVVHxS0XnubZCvS4tVGyCH/TOd66QpxEusn2ro3KfL4dIOikdMjqcID36iTQfzGZGGkWQtcw7CxRzf7dE02xaV010mUayKsw7LlUU147kphci79eP)"/>
-#! <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="admin"/>
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszZfzLmU0jiNpI+gHuYFnJnFhyIAL5dSzssoN2MojCi6wEZ3SGC7Zy0wx+6tMZvdZsSHinJ4QApMnrBxvMuOKMIrm/OKNOWdjC9HDLVWfeY1NugGJxZ+VS4OadIAup9qy5EOjs6+PbhZpeNLIzlFQcO5OsZLgR5d+8rVphEXXa5DGfAka9G3yosge/7o67X03tfGH2o84SgOIr2i8IfSiuG0tfnWE5qMefqkAuep46IXhiYQWnAx+93bNBYZyqo+SZ7IJ1gieiynPa9mFCrXiFHe+0pG51ReQUgADt0tWzt4SWDM/qCQbZfe9zs2f9yXXmQoEBPafiQJSnvheRRVhZEnvk2UCdATDc)"/>
+#! <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="fmepediademos"/>
 #! <XFORM_PARM PARM_NAME="TM_TAG" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SERVER_NAME" PARM_VALUE="http://localhost:8080"/>
+#! <XFORM_PARM PARM_NAME="SERVER_NAME" PARM_VALUE="https://fmepedia2014-safe-software.fmecloud.com"/>
 #! <XFORM_PARM PARM_NAME="WORKSPACE_NAME" PARM_VALUE="validate-subworkspace.fmw"/>
-#! <XFORM_PARM PARM_NAME="PARAMETER_TYPES" PARM_VALUE="STRING,STRING,STRING,USER_DEFINED_LIST,STRING,STRING"/>
+#! <XFORM_PARM PARM_NAME="PARAMETER_TYPES" PARM_VALUE="USER_DEFINED_LIST"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FMEServerJobSubmitter"/>
 #! <XFORM_PARM PARM_NAME="BLOCKING" PARM_VALUE="Yes"/>
-#! <XFORM_PARM PARM_NAME="REPOSITORY" PARM_VALUE="cadqa"/>
+#! <XFORM_PARM PARM_NAME="REPOSITORY" PARM_VALUE="validation"/>
 #! <XFORM_PARM PARM_NAME="SERVER_PORT" PARM_VALUE="0"/>
-#! <XFORM_PARM PARM_NAME="WORKSPACE_PARAMETERS" PARM_VALUE="DestDataset_POSTGIS,gisdb,POSTGIS_OUT_PASSWORD_POSTGIS,fme_decrypt&lt;openparen&gt;MDowfCN8I3xcG3GQ&lt;solidus&gt;TeRRUJUZ5LDPtdvpscbh7Nj9gG&lt;solidus&gt;INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl&lt;solidus&gt;0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07&lt;solidus&gt;nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D&lt;solidus&gt;WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMsz8iP+WlFGghTgJlnz3alpVDYibq3gMtbHKOLEP+w7SGZ4DxxzCoGXMql6JYC83ndNd5apr8+761T+H2S1CvC9uWP8RCxodmvLsqdqKPDrR5AqhH1KK8seNmhKsNdTtuP03k8b0Q8PhzpCEaosr39zAnZqzrybM7eq8IOV0bukuBpsp4BYzCyRHOTKu5oI5oNjrNTOJmUoX91QIu9UJkJJZkoFSt9lfHeC8txPnh0DIZN0uxXDpONZWZdJAvv1Ui2yYONrPqDyEaxmhieSlu0PucQr&lt;solidus&gt;wvqU2DEvwbZmdaIEBOXd42DEMK3xKePi4bg+ab6SHcKRduPCo+SwMBv0P4uG&lt;solidus&gt;Ny&lt;solidus&gt;ly80nSj&lt;closeparen&gt;,POSTGIS_OUT_HOST_POSTGIS,localhost,SourceDataset_ACAD,&lt;at&gt;Value&lt;openparen&gt;attached_file&lt;closeparen&gt;,TEMPFOLDER,c:&lt;backslash&gt;temp&lt;backslash&gt;validation,DestDataset_TEXTLINE,c:&lt;backslash&gt;temp&lt;backslash&gt;validation&lt;backslash&gt;file.html"/>
+#! <XFORM_PARM PARM_NAME="WORKSPACE_PARAMETERS" PARM_VALUE="SourceDataset_ACAD,&lt;at&gt;Value&lt;openparen&gt;attached_file&lt;closeparen&gt;"/>
 #! <XFORM_PARM PARM_NAME="SUBSECTION" PARM_VALUE="SERVER_JOB_SUBMITTER"/>
 #! <XFORM_PARM PARM_NAME="PRIORITY" PARM_VALUE="100"/>
 #! </TRANSFORMER>
@@ -566,7 +597,7 @@
 #! <XFORM_PARM PARM_NAME="email_from" PARM_VALUE="fmeserver@gmaill.com"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="email_subscriber_content" PARM_VALUE="File&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;submitted_file&lt;closeparen&gt;&lt;space&gt;has&lt;space&gt;been&lt;space&gt;loaded&lt;space&gt;into&lt;space&gt;the&lt;space&gt;central&lt;space&gt;repository&lt;space&gt;database."/>
-#! <XFORM_PARM PARM_NAME="email_attachment_paths" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;output_datasets&lt;opencurly&gt;1&lt;closecurly&gt;.path&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="email_attachment_paths" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;output_datasets&lt;opencurly&gt;0&lt;closecurly&gt;.path&lt;closeparen&gt;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="219"
@@ -605,7 +636,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeFileReader"/>
 #! <XFORM_PARM PARM_NAME="CHAR_ENCODING" PARM_VALUE="utf-8"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="FILE_NAME" PARM_VALUE="@Value(output_datasets{1}.path)"/>
+#! <XFORM_PARM PARM_NAME="FILE_NAME" PARM_VALUE="@Value(output_datasets{0}.path)"/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="DEST_ATTR" PARM_VALUE="_file_contents"/>
 #! </TRANSFORMER>
@@ -776,7 +807,7 @@
 #! <XFORM_PARM PARM_NAME="email_from" PARM_VALUE="fmeserver@gmaill.com"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="email_subscriber_content" PARM_VALUE="File&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;submitted_file&lt;closeparen&gt;&lt;space&gt;has&lt;space&gt;errors&lt;space&gt;and&lt;space&gt;therefore&lt;space&gt;has&lt;space&gt;NOT&lt;space&gt;been&lt;space&gt;loaded&lt;space&gt;into&lt;space&gt;the&lt;space&gt;central&lt;space&gt;repository&lt;space&gt;database.&lt;space&gt;See&lt;space&gt;the&lt;space&gt;attached&lt;space&gt;HTML&lt;space&gt;file&lt;space&gt;for&lt;space&gt;details&lt;space&gt;of&lt;space&gt;the&lt;space&gt;errors."/>
-#! <XFORM_PARM PARM_NAME="email_attachment_paths" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;output_datasets&lt;opencurly&gt;1&lt;closecurly&gt;.path&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="email_attachment_paths" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;output_datasets&lt;opencurly&gt;0&lt;closecurly&gt;.path&lt;closeparen&gt;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="229"
@@ -1278,7 +1309,7 @@
 #! BOTTOM_RIGHT="3974 -1194"
 #! STICKY="true"
 #! COLOUR="0.192157,0.0784314,0.427451"
-#! CONTENTS="8 19 5 20 4 6 7 16 9 17 18 "
+#! CONTENTS="7 17 18 9 19 20 4 5 16 6 8 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -1786,7 +1817,7 @@ DEFAULT_MACRO HTTP_AUTH_USERNAME admin
 GUI IGNORE TEXT HTTP_AUTH_USERNAME Username:
 DEFAULT_MACRO HTTP_AUTH_PASSWORD fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszXfm0xFazbN9sbeLN6BVdW4ffj13LVEIEqNNS80QzAaCqZKTaFipv/tDSBo/elb7Zb6yUFdbzPHShd2Wbf5aIsum53BzTyzoFd3vd7HnwRBDdRvryHhTG65pyC8KFGFhjuNvGMYoE3fleyDbz+iM9tCIE/Fif3ZlF3x10ntws9ZDD27g82FDTsevjtI3LZ8Thfe3kMDBKzeMHrj+zkI+26s5PPTgFy1hDFB3kXXQWbXBOuCPb7BEM4QgTzc/7G8gHEXfuBAVxk3l6/fGO+StYlAsOGDzv+ty/r6OIkgfBbsfumKTQyfrKF+CoylZVREfFY/DLAxk1gkrSatGrsCW31VIov0ydS5ik)
 GUI IGNORE PASSWORD HTTP_AUTH_PASSWORD Password:
-DEFAULT_MACRO EMAIL_TYPE imap
+DEFAULT_MACRO EMAIL_TYPE email
 GUI IGNORE LOOKUP_CHOICE EMAIL_TYPE IMAP,imap%SMTP,email Type of email publisher:
 INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(HTTP_AUTH_USERNAME)} == {}} { puts_real {Parameter 'HTTP_AUTH_USERNAME' must be given a value.}; exit 1; }; ]
@@ -1912,8 +1943,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_2    INPUT  FEATURE_TY
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc StringReplacer_ad6067d4_ae1a_4994_9106_b98f7955e18a0_replacer { findText replaceText} {     set attrs [split \"imap_publisher_attachment{0}\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringReplacer    INPUT  FEATURE_TYPE AttributeExposer_2_OUTPUT    OUTPUT FEATURE_TYPE StringReplacer_OUTPUT         @Tcl2("StringReplacer_ad6067d4_ae1a_4994_9106_b98f7955e18a0_replacer {<quote>} {}")
+Tcl2 proc StringReplacer_d14921ba_4817_432d_bc48_c0206ecad9381_replacer { findText replaceText} {     set attrs [split \"imap_publisher_attachment{0}\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringReplacer    INPUT  FEATURE_TYPE AttributeExposer_2_OUTPUT    OUTPUT FEATURE_TYPE StringReplacer_OUTPUT         @Tcl2("StringReplacer_d14921ba_4817_432d_bc48_c0206ecad9381_replacer {<quote>} {}")
 
 # -------------------------------------------------------------------------
 
@@ -1933,12 +1964,12 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Logger_Logger    INPUT  FEATURE_TYPE At
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_e809a913_df92_4818_9cc9_950b3ad877600_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE Logger_LOGGED    BLOCKING Yes    SERVER_NAME http://localhost:8080    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszIDAuMYg/Xt6RsNosDJqn7iAVoiLE0vzOY6xcnJ1zoTz9+LGAXcTF4jZjRLh1G1CNbTMwCIQ66/9kHHXAaCTEvBzWtYpXh6g5x7m8a8JGwDia8bDM1C9Mi1qsvgX3xS7xerElxuKORGD3ND3r5/jkvJFD+0UUlHWBsaXDb8aUtlap9cp/OcagesVCFxcxiZGGM4DRUrjnFCG9hsJFv9Ut0nqPFub9/UFJkTCqqmbeQ3ok1I4oVVHxS0XnubZCvS4tVGyCH/TOd66QpxEusn2ro3KfL4dIOikdMjqcID36iTQfzGZGGkWQtcw7CxRzf7dE02xaV010mUayKsw7LlUU147kphci79eP)"    REPOSITORY "cadqa"    WORKSPACE_NAME "validate-subworkspace.fmw"    WORKSPACE_PARAMETERS "DestDataset_POSTGIS,gisdb,POSTGIS_OUT_PASSWORD_POSTGIS,fme_decrypt<openparen>MDowfCN8I3xcG3GQ<solidus>TeRRUJUZ5LDPtdvpscbh7Nj9gG<solidus>INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl<solidus>0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07<solidus>nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D<solidus>WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMsz8iP+WlFGghTgJlnz3alpVDYibq3gMtbHKOLEP+w7SGZ4DxxzCoGXMql6JYC83ndNd5apr8+761T+H2S1CvC9uWP8RCxodmvLsqdqKPDrR5AqhH1KK8seNmhKsNdTtuP03k8b0Q8PhzpCEaosr39zAnZqzrybM7eq8IOV0bukuBpsp4BYzCyRHOTKu5oI5oNjrNTOJmUoX91QIu9UJkJJZkoFSt9lfHeC8txPnh0DIZN0uxXDpONZWZdJAvv1Ui2yYONrPqDyEaxmhieSlu0PucQr<solidus>wvqU2DEvwbZmdaIEBOXd42DEMK3xKePi4bg+ab6SHcKRduPCo+SwMBv0P4uG<solidus>Ny<solidus>ly80nSj<closeparen>,POSTGIS_OUT_HOST_POSTGIS,localhost,SourceDataset_ACAD,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>attached_file<closeparen>,FMEServerJobSubmitter),TEMPFOLDER,c:<backslash>temp<backslash>validation,DestDataset_TEXTLINE,c:<backslash>temp<backslash>validation<backslash>file.html"    PRIORITY "100"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_e809a913_df92_4818_9cc9_950b3ad877600_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_e809a913_df92_4818_9cc9_950b3ad877600_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_e809a913_df92_4818_9cc9_950b3ad877600_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_0e2ba14c_d8ca_4579_851d_46e344861cc01_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE Logger_LOGGED    BLOCKING Yes    SERVER_NAME https://fmepedia2014-safe-software.fmecloud.com    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszZfzLmU0jiNpI+gHuYFnJnFhyIAL5dSzssoN2MojCi6wEZ3SGC7Zy0wx+6tMZvdZsSHinJ4QApMnrBxvMuOKMIrm/OKNOWdjC9HDLVWfeY1NugGJxZ+VS4OadIAup9qy5EOjs6+PbhZpeNLIzlFQcO5OsZLgR5d+8rVphEXXa5DGfAka9G3yosge/7o67X03tfGH2o84SgOIr2i8IfSiuG0tfnWE5qMefqkAuep46IXhiYQWnAx+93bNBYZyqo+SZ7IJ1gieiynPa9mFCrXiFHe+0pG51ReQUgADt0tWzt4SWDM/qCQbZfe9zs2f9yXXmQoEBPafiQJSnvheRRVhZEnvk2UCdATDc)"    REPOSITORY "validation"    WORKSPACE_NAME "validate-subworkspace.fmw"    WORKSPACE_PARAMETERS "SourceDataset_ACAD,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>attached_file<closeparen>,FMEServerJobSubmitter)"    PRIORITY "100"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_0e2ba14c_d8ca_4579_851d_46e344861cc01_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_0e2ba14c_d8ca_4579_851d_46e344861cc01_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_0e2ba14c_d8ca_4579_851d_46e344861cc01_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileReader    INPUT  FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED    OUTPUT FEATURE_TYPE AttributeFileReader_OUTPUT         @File(ENCODED_ATTR,DestReadSrcWrite,_file_contents,"@EvaluateExpression(STRING,<at>Value<openparen>output_datasets<opencurly>1<closecurly>.path<closeparen>,AttributeFileReader)",utf-8)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileReader    INPUT  FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED    OUTPUT FEATURE_TYPE AttributeFileReader_OUTPUT         @File(ENCODED_ATTR,DestReadSrcWrite,_file_contents,"@EvaluateExpression(STRING,<at>Value<openparen>output_datasets<opencurly>0<closecurly>.path<closeparen>,AttributeFileReader)",utf-8)
 
 # -------------------------------------------------------------------------
 
@@ -1960,15 +1991,15 @@ MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_from fmeserver@gmaill.com
 MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_replyto 
 MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subject <space>QA<space>for<space>file<space><at>Value<openparen>submitted_file<closeparen><space>failed!
 MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subscriber_content File<space><at>Value<openparen>submitted_file<closeparen><space>has<space>errors<space>and<space>therefore<space>has<space>NOT<space>been<space>loaded<space>into<space>the<space>central<space>repository<space>database.<space>See<space>the<space>attached<space>HTML<space>file<space>for<space>details<space>of<space>the<space>errors.
-MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_attachment_paths <at>Value<openparen>output_datasets<opencurly>1<closecurly>.path<closeparen>
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_attachment_paths <at>Value<openparen>output_datasets<opencurly>0<closecurly>.path<closeparen>
 DEFAULT_MACRO FMEServerEmailGenerator_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(FMEServerEmailGenerator_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(FMEServerEmailGenerator_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT1406754621 Input Splitter"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT1406763858 Input Splitter"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_399087c9_a12e_4237_8c65_f5adb5dac6d40_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Local} == {Local} }    {       set xFormName [FME_EncodeText {$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_6c550f6f_2e13_4a2d_a75b_d91bc0a242c52_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Local} == {Local} }    {       set xFormName [FME_EncodeText {$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_OUTPUT"         "_email_feature_id" @Count(fme_encoded,@Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_399087c9_a12e_4237_8c65_f5adb5dac6d40_createDomain {counter}"), 0)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_OUTPUT"         "_email_feature_id" @Count(fme_encoded,@Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_6c550f6f_2e13_4a2d_a75b_d91bc0a242c52_createDomain {counter}"), 0)
 
 # -------------------------------------------------------------------------
 
@@ -1984,7 +2015,7 @@ FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME $(FMEServerEmailGenerator_WORKSPA
 FACTORY_DEF * TestFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_JSONTemplater_OUTPUT"    TEST _email_attachment_paths ATTRIBUTE_IS_EMPTY <Unused> ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FAILED FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_FAILED"
 # -------------------------------------------------------------------------
 
-Tcl2 set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitDelim]] }      {         set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitWidths;            set source [FME_GetAttribute {"_email_attachment_paths"}];            set attrNum 0;            set listName {_email_attachment_path_list};            set attrPos 0;            foreach width [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrPos $width;               incr attrNum;            };         };      }      else      {         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitDelim;            set delim [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb320_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute {"_email_attachment_paths"}];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              set part [string range $source $startIndex [expr $nextIndex-1]];              if { $keepEmptyParts || $part != \"\" } {                 lappend bits $part;              };              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            set lastPart [string range $source $startIndex end];            if { $keepEmptyParts || $lastPart != \"\" } { lappend bits $lastPart };            set listName {_email_attachment_path_list};            set attrNum 0;            foreach bit $bits            {               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrNum;            }          }       }
+Tcl2 set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitDelim]] }      {         set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitWidths;            set source [FME_GetAttribute {"_email_attachment_paths"}];            set attrNum 0;            set listName {_email_attachment_path_list};            set attrPos 0;            foreach width [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrPos $width;               incr attrNum;            };         };      }      else      {         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitDelim;            set delim [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b42_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute {"_email_attachment_paths"}];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              set part [string range $source $startIndex [expr $nextIndex-1]];              if { $keepEmptyParts || $part != \"\" } {                 lappend bits $part;              };              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            set lastPart [string range $source $startIndex end];            if { $keepEmptyParts || $lastPart != \"\" } { lappend bits $lastPart };            set listName {_email_attachment_path_list};            set attrNum 0;            foreach bit $bits            {               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrNum;            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_FAILED"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"         @Tcl2($(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit)
 
 # -------------------------------------------------------------------------
@@ -1992,8 +2023,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAM
 FACTORY_DEF * ElementFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"    LIST_NAME "_email_attachment_path_list{}"    ELEMENT_NUMBER_FIELD "_element_index"    CLONE_GEOMETRY    MODE LEAN    OUTPUT ELEMENT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"         @RemoveAttributes(ElementFactory.baseCloned)
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_d5d0ec08_d9b0_4d98_969f_4ca84b19dfa30_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_email_attachment_json}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_d5d0ec08_d9b0_4d98_969f_4ca84b19dfa30_doSetAttr {@EvaluateExpression(STRING_ENCODED,<quote>email_attachment<opencurly><at>Value<openparen>_element_index<closeparen><closecurly><quote>:<space><quote><at>Value<openparen>_email_attachment_path_list<closeparen><quote>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator)} ")
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_54762631_1e40_4d17_9523_5e586763880b2_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_email_attachment_json}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_54762631_1e40_4d17_9523_5e586763880b2_doSetAttr {@EvaluateExpression(STRING_ENCODED,<quote>email_attachment<opencurly><at>Value<openparen>_element_index<closeparen><closecurly><quote>:<space><quote><at>Value<openparen>_email_attachment_path_list<closeparen><quote>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator)} ")
 
 # -------------------------------------------------------------------------
 
@@ -2005,17 +2036,17 @@ FACTORY_DEF * AggregateFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPA
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_bce3e688_8fdf_4060_b6c7_5ffb4b06c0350_replacer { findText replaceText} {     set attrs [split \"_email_attachment_json\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_AGGREGATE"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_bce3e688_8fdf_4060_b6c7_5ffb4b06c0350_replacer {<backslash>} {<backslash><backslash>}")
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_0030cab5_a59c_4822_9167_28f62a3a11b02_replacer { findText replaceText} {     set attrs [split \"_email_attachment_json\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_AGGREGATE"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_0030cab5_a59c_4822_9167_28f62a3a11b02_replacer {<backslash>} {<backslash><backslash>}")
 
 # -------------------------------------------------------------------------
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_f9f9ece3_52d2_40ea_9f1c_4077c7216f170_replacer { findText replaceText} {     set attrs [split \"text_line_data\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_f9f9ece3_52d2_40ea_9f1c_4077c7216f170_replacer {<closecurly>} {@EvaluateExpression(STRING_ENCODED,<comma><lf><at>Value<openparen>_email_attachment_json<closeparen><lf><closecurly>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer)}")
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_a0beeab0_f0bb_493a_90ac_e4a7f15ae8a52_replacer { findText replaceText} {     set attrs [split \"text_line_data\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_a0beeab0_f0bb_493a_90ac_e4a7f15ae8a52_replacer {<closecurly>} {@EvaluateExpression(STRING_ENCODED,<comma><lf><at>Value<openparen>_email_attachment_json<closeparen><lf><closecurly>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer)}")
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT1406754621 Output Collector"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT1406763858 Output Collector"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(FMEServerEmailGenerator_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerEmailGenerator_2 OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE FMEServerEmailGenerator_2_OUTPUT   OUTPUT FEATURE_TYPE FMEServerEmailGenerator_2_OUTPUT
 # -------------------------------------------------------------------------
@@ -2037,15 +2068,15 @@ MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_from fmeserver@gmaill.com
 MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_replyto 
 MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subject QA<space>for<space>file<space><at>Value<openparen>submitted_file<closeparen><space>succeeded!
 MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_subscriber_content File<space><at>Value<openparen>submitted_file<closeparen><space>has<space>been<space>loaded<space>into<space>the<space>central<space>repository<space>database.
-MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_attachment_paths <at>Value<openparen>output_datasets<opencurly>1<closecurly>.path<closeparen>
+MACRO $(FMEServerEmailGenerator_WORKSPACE_NAME)_email_attachment_paths <at>Value<openparen>output_datasets<opencurly>0<closecurly>.path<closeparen>
 DEFAULT_MACRO FMEServerEmailGenerator_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(FMEServerEmailGenerator_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(FMEServerEmailGenerator_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT1406754621 Input Splitter"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT1406763858 Input Splitter"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_399087c9_a12e_4237_8c65_f5adb5dac6d41_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Local} == {Local} }    {       set xFormName [FME_EncodeText {$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_6c550f6f_2e13_4a2d_a75b_d91bc0a242c53_createDomain { in_domainName } {    set domainName $in_domainName;    if { {Local} == {Local} }    {       set xFormName [FME_EncodeText {$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_}];       set domainName $xFormName$domainName;    };    return $domainName; }
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_OUTPUT"         "_email_feature_id" @Count(fme_encoded,@Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_399087c9_a12e_4237_8c65_f5adb5dac6d41_createDomain {counter}"), 0)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_OUTPUT"         "_email_feature_id" @Count(fme_encoded,@Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_Counter_6c550f6f_2e13_4a2d_a75b_d91bc0a242c53_createDomain {counter}"), 0)
 
 # -------------------------------------------------------------------------
 
@@ -2061,7 +2092,7 @@ FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME $(FMEServerEmailGenerator_WORKSPA
 FACTORY_DEF * TestFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_JSONTemplater_OUTPUT"    TEST _email_attachment_paths ATTRIBUTE_IS_EMPTY <Unused> ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FAILED FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_FAILED"
 # -------------------------------------------------------------------------
 
-Tcl2 set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitDelim]] }      {         set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitWidths;            set source [FME_GetAttribute {"_email_attachment_paths"}];            set attrNum 0;            set listName {_email_attachment_path_list};            set attrPos 0;            foreach width [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrPos $width;               incr attrNum;            };         };      }      else      {         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitDelim;            set delim [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_d2090142_5c9c_485a_875e_b6591df3eb321_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute {"_email_attachment_paths"}];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              set part [string range $source $startIndex [expr $nextIndex-1]];              if { $keepEmptyParts || $part != \"\" } {                 lappend bits $part;              };              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            set lastPart [string range $source $startIndex end];            if { $keepEmptyParts || $lastPart != \"\" } { lappend bits $lastPart };            set listName {_email_attachment_path_list};            set attrNum 0;            foreach bit $bits            {               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrNum;            }          }       }
+Tcl2 set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitDelim]] }      {         set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitWidths;            set source [FME_GetAttribute {"_email_attachment_paths"}];            set attrNum 0;            set listName {_email_attachment_path_list};            set attrPos 0;            foreach width [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrPos $width;               incr attrNum;            };         };      }      else      {         proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitDelim;            set delim [set $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_765ccea8_d88b_416c_8acb_efa778f591b43_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute {"_email_attachment_paths"}];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              set part [string range $source $startIndex [expr $nextIndex-1]];              if { $keepEmptyParts || $part != \"\" } {                 lappend bits $part;              };              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            set lastPart [string range $source $startIndex end];            if { $keepEmptyParts || $lastPart != \"\" } { lappend bits $lastPart };            set listName {_email_attachment_path_list};            set attrNum 0;            foreach bit $bits            {               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrNum;            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_FAILED"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"         @Tcl2($(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_doSplit)
 
 # -------------------------------------------------------------------------
@@ -2069,8 +2100,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAM
 FACTORY_DEF * ElementFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"    LIST_NAME "_email_attachment_path_list{}"    ELEMENT_NUMBER_FIELD "_element_index"    CLONE_GEOMETRY    MODE LEAN    OUTPUT ELEMENT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"         @RemoveAttributes(ElementFactory.baseCloned)
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_d5d0ec08_d9b0_4d98_969f_4ca84b19dfa31_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_email_attachment_json}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_d5d0ec08_d9b0_4d98_969f_4ca84b19dfa31_doSetAttr {@EvaluateExpression(STRING_ENCODED,<quote>email_attachment<opencurly><at>Value<openparen>_element_index<closeparen><closecurly><quote>:<space><quote><at>Value<openparen>_email_attachment_path_list<closeparen><quote>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator)} ")
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_54762631_1e40_4d17_9523_5e586763880b3_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {_email_attachment_json}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_ListExploder_LIST_FOUND"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_OUTPUT"        @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator_54762631_1e40_4d17_9523_5e586763880b3_doSetAttr {@EvaluateExpression(STRING_ENCODED,<quote>email_attachment<opencurly><at>Value<openparen>_element_index<closeparen><closecurly><quote>:<space><quote><at>Value<openparen>_email_attachment_path_list<closeparen><quote>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringConcatenator)} ")
 
 # -------------------------------------------------------------------------
 
@@ -2082,17 +2113,17 @@ FACTORY_DEF * AggregateFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPA
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_bce3e688_8fdf_4060_b6c7_5ffb4b06c0351_replacer { findText replaceText} {     set attrs [split \"_email_attachment_json\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_AGGREGATE"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_bce3e688_8fdf_4060_b6c7_5ffb4b06c0351_replacer {<backslash>} {<backslash><backslash>}")
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_0030cab5_a59c_4822_9167_28f62a3a11b03_replacer { findText replaceText} {     set attrs [split \"_email_attachment_json\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Aggregator_AGGREGATE"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_0030cab5_a59c_4822_9167_28f62a3a11b03_replacer {<backslash>} {<backslash><backslash>}")
 
 # -------------------------------------------------------------------------
 
 MACRO casemac
 INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_f9f9ece3_52d2_40ea_9f1c_4077c7216f171_replacer { findText replaceText} {     set attrs [split \"text_line_data\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_f9f9ece3_52d2_40ea_9f1c_4077c7216f171_replacer {<closecurly>} {@EvaluateExpression(STRING_ENCODED,<comma><lf><at>Value<openparen>_email_attachment_json<closeparen><lf><closecurly>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer)}")
+Tcl2 proc $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_a0beeab0_f0bb_493a_90ac_e4a7f15ae8a53_replacer { findText replaceText} {     set attrs [split \"text_line_data\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       if {$length > 0} {          if {{no} == {yes}} {             FME_SetAttribute $attr [regsub $(casemac) -all -- $findValue [FME_GetAttribute $attr] $replaceValue];          } else {             FME_SetAttribute $attr [string map $(casemac) [list $findValue $replaceValue] [FME_GetAttribute $attr]];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_a0beeab0_f0bb_493a_90ac_e4a7f15ae8a53_replacer {<closecurly>} {@EvaluateExpression(STRING_ENCODED,<comma><lf><at>Value<openparen>_email_attachment_json<closeparen><lf><closecurly>,$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer)}")
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT1406754621 Output Collector"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT1406763858 Output Collector"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_Tester_PASSED"   INPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_StringReplacer_OUTPUT"   OUTPUT FEATURE_TYPE "$(FMEServerEmailGenerator_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(FMEServerEmailGenerator_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerEmailGenerator OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE FMEServerEmailGenerator_OUTPUT   OUTPUT FEATURE_TYPE FMEServerEmailGenerator_OUTPUT
 # -------------------------------------------------------------------------
