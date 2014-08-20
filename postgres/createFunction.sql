@@ -14,7 +14,7 @@ parse_object = urlparse(args[0])
 # params = urllib.urlencode(args[1])
 headers = {"Content-type": "application/x-www-form-urlencoded"}
 url = args[1]
-conn = httplib.HTTPConnection(parse_object.netloc)
+conn = httplib.HTTPSConnection(parse_object.netloc)
 conn.request("POST", parse_object.path, args[1], headers)
 
 return args[0]+args[1]
@@ -27,11 +27,11 @@ DECLARE
 	message	text;
 	
 BEGIN 
-	SELECT 'minID=' || cast(min(id) AS text) || '&maxID=' ||cast (max(id) AS text)
+	SELECT 'minID=' || cast(min(primaryindex) AS text) || '&maxID=' ||cast (max(primaryindex) AS text)
 	INTO message
 	FROM temp_ids;
 
-	PERFORM send_request('http://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw',message);
+	PERFORM send_request('https://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw',message);
 
 	RETURN 'Y';
 
