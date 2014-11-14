@@ -2,6 +2,8 @@
 -- It seems like there is no built-in function in PL/pgSQL (2012-09-25). Therefore, a small PL/Python script is used to send the request. All further logic is written in PL/pgSQL.
 CREATE EXTENSION plpythonu;
 
+SET search_path cad_qa;
+
 CREATE OR REPLACE FUNCTION send_request(url text, param1 text) RETURNS text AS
 '
 # Documentation for httplib: http://docs.python.org/library/httplib.html
@@ -31,7 +33,7 @@ BEGIN
 	INTO message
 	FROM temp_ids;
 
-	PERFORM send_request('https://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw',message);
+	PERFORM send_request('https://yourFMEServer/fmejobsubmitter/demos/validation-websocket-stream.fmw',message);
 
 	RETURN 'Y';
 
