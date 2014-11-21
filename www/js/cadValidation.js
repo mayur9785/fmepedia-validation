@@ -21,8 +21,8 @@ $(document).ready(function() {
 });
 
 var BuildForm = {
-	token : 'fb1c3ee6828e6814c75512dd4770a02e73d913b8',
-	host : 'https://fmepedia2014-safe-software.fmecloud.com',
+	token : '35bd9bbd4c15116518070ce4fe4a38e1d2a26292',
+	host : 'https://demos-safe-software.fmecloud.com',
 	repository : 'validation',
 	workspaceName : 'validate-subworkspace.fmw',
 	session : null,

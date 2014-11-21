@@ -31,9 +31,9 @@ DECLARE
 BEGIN 
 	SELECT 'minID=' || cast(min(primaryindex) AS text) || '&maxID=' ||cast (max(primaryindex) AS text)
 	INTO message
-	FROM temp_ids;
+	FROM cad_qa.temp_ids;
 
-	PERFORM send_request('https://yourFMEServer/fmejobsubmitter/demos/validation-websocket-stream.fmw',message);
+	PERFORM send_request('https://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw?token=token-here',message);
 
 	RETURN 'Y';
 
