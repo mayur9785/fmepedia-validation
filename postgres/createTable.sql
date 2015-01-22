@@ -3,6 +3,8 @@
 -- Contains validated CAD data, loaded by FME --
 ------------------------------------------------
 
+SET search_path TO cad_qa, public;
+
 -- DROP TABLE "WATERLINES";
 
 CREATE TABLE "WATERLINES"
@@ -30,7 +32,7 @@ CREATE TABLE "WATERLINES"
 );
   
 -- EPSG 2277 = Texas CF-83
-SELECT AddGeometryColumn('WATERLINES','geom',2277,'LINESTRING',2);
+SELECT AddGeometryColumn('cad_qa','WATERLINES','geom',2277,'LINESTRING',2);
 
 -- Index: "WATERLINES_geom_1388688556114"
 
@@ -45,7 +47,7 @@ CREATE INDEX "WATERLINES_geom_1388688556114"
 -- Temporary feature IDs table --
 ---------------------------------  
 
-  -- DROP TABLE "TEMP_IDS";
+  -- DROP TABLE temp_ids;
 CREATE TABLE temp_ids 
-   (primaryindex numeric(38,0) NOT NULL));
+   (primaryindex numeric(38,0) NOT NULL);
 

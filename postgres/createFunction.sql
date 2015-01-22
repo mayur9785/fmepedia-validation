@@ -1,6 +1,8 @@
--- Create HTTP function
+﻿-- Create HTTP function
 -- It seems like there is no built-in function in PL/pgSQL (2012-09-25). Therefore, a small PL/Python script is used to send the request. All further logic is written in PL/pgSQL.
 CREATE EXTENSION plpythonu;
+
+SET search_path TO cad_qa;
 
 CREATE OR REPLACE FUNCTION send_request(url text, param1 text) RETURNS text AS
 '
@@ -29,9 +31,9 @@ DECLARE
 BEGIN 
 	SELECT 'minID=' || cast(min(primaryindex) AS text) || '&maxID=' ||cast (max(primaryindex) AS text)
 	INTO message
-	FROM temp_ids;
+	FROM cad_qa.temp_ids;
 
-	PERFORM send_request('https://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw',message);
+	PERFORM cad_qa.send_request('https://yourFMEServer/fmejobsubmitter/validation/websocket-stream.fmw?token=token-here',message);
 
 	RETURN 'Y';
 
