@@ -1,139 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-<meta charset="UTF-8">
-<style type="text/css">
-	#map_canvas {
-		height: 600px;
-	}
-	dt {
-		padding-top:18px;
-		padding-bottom: 5px;
-	}
-</style>
 <head>
-	<!-- Safe Software, 2013 -->
-	<!-- http://www.safe.com -->
+  <meta charset="UTF-8">
+  <style type="text/css">
+    #map_canvas {
+        height: 600px;
+    }
+    dt {
+        padding-top:18px;
+        padding-bottom: 5px;
+    }
+  </style><!-- Safe Software, 2015 -->
+  <!-- http://www.safe.com -->
 
-	<title>Realtime Display</title>
+  <title>Real-time Display</title><!-- JQuery -->
 
-	<!-- JQuery -->
-	<script src="libs/jquery-1.10.1.js"></script>
+  <script src="libs/jquery-1.10.1.js"></script><!-- Bootstrap -->
+  <!--http://getbootstrap.com/2.3.2/-->
 
-	<!-- Bootstrap -->
-	<!--http://getbootstrap.com/2.3.2/-->
-	<script src="libs/bootstrap/js/bootstrap.js"></script>
-	<link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-  
-	<!-- Google Maps -->
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+  <script src="libs/bootstrap/js/bootstrap.js"></script>
+  <link href="libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"><!-- Google Maps -->
 
-	<!-- Stylesheet for demo/tutorial -->
-	<link rel="stylesheet" href="css/index.css">
-	
-  <!-- Upload Library -->
+  <script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false" type="text/javascript"></script><!-- Stylesheet for demo/tutorial -->
+  <link href="css/index.css" rel="stylesheet"><!-- Upload Library -->
   <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+
   <script src="libs/upload/js/vendor/jquery.ui.widget.js"></script>
-  <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-  <script src="libs/upload/js/jquery.iframe-transport.js"></script>
-  <!-- The basic File Upload plugin -->
-  <script src="libs/upload/js/jquery.fileupload.js"></script>
-  <!-- The File Upload UI plugin -->
-  <link rel="stylesheet" href="libs/upload/css/jquery.fileupload-ui.css">
-  
-  
-	<!-- FME Server Javascript API -->
-	<script type="text/javascript" src="http://api.fmeserver.com/js/v1.1/FMEServer.js"></script>
-	<script type="text/javascript">
-		// Required for FME Server Connection Object and Email
-		var fmeserverurl = "demos-safe-software.fmecloud.com";
-	</script>
-  
-  <!-- CAD validation demo JS -->
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+
+  <script src="libs/upload/js/jquery.iframe-transport.js"></script><!-- The basic File Upload plugin -->
+
+  <script src="libs/upload/js/jquery.fileupload.js"></script><!-- The File Upload UI plugin -->
+  <link href="libs/upload/css/jquery.fileupload-ui.css" rel="stylesheet">
+  <!-- FME Server Javascript API -->
+
+  <script src="http://api.fmeserver.com/js/v1.1/FMEServer.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      // Required for FME Server Connection Object and Email
+        var fmeserverurl = "demos-safe-software.fmecloud.com";
+  </script><!-- CAD validation demo JS -->
+
   <script src="./js/cadValidation.js" type="text/javascript"></script>
-  
 </head>
 
 <body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse"><span class=
+        "icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></a>
 
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">        
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-
-			<div class="brand">FME Server<span class="hidden-tiny"> Demos</span></div>
-				 
-			<div class="nav-collapse collapse">
-				<a href="https://github.com/safesoftware/fmepedia-validation" class="btn">
-					<img src="libs/github.png"> Fork GitHub
-				</a>
-				<a href="https://github.com/safesoftware/fmepedia-validation/archive/master.zip" class="btn">
-					<i class="icon-download-alt"></i> Download Zip
-				</a>
-			</div>
-			<span class="hidden-phone" id="safe-ribbon"><a href="http://www.safe.com">Powered by FME</a></span>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-	  <div class="row">
-		<div class="span12">
-			<h1>Realtime Display <small>Upload CAD data and watch it appear in realtime</small></h1>
-		</div>
-      </div>
-      <!-- Content -->
-      <div class="row">
-        <div class="span4">
-			<h3>User manual</h3>
-			<dl>
-				<dt>1. Prepare database <span id="dbstatus" class="label label-important">Database not ready</span></dt>
-				<dd>
-					<button class="btn btn-primary" onclick="javascript: deleteDb();">Delete data</button>
-				</dd>
-				<dt>2. Download example data</dt>
-				<dd><a target="_blank" href='download/distribution_N25_good.dwg'>distribution_N25_good.dwg</a></dd>
-				<dd><a target="_blank" href='download/distribution_N25_bad.dwg'>distribution_N25_bad.dwg</a></dd>
-				<dt>3. Send file to FMEServer</dt>
-				<dd>
-					<p>a. By email:</p>
-          <script type="text/javascript">
-						document.write('<p><a href="mailto:cad_waterqa@' + fmeserverurl +'" target="_blank"> cadqa@' + fmeserverurl +'</a></p>');
-					</script>
-          <section>
-            <p>b. By direct upload:</p>
-            <div id='dropzone' class='fade well well-large'>
-              <!-- The container for the uploaded files -->
-              <div id='fileTable' style='display:none'></div>
-
-
-              <p id='dropText'>Drop your files here</p>
-              <br/>
-              <span class="btn btn-success fileinput-button">
-                <i class="icon-plus icon-white"></i>
-                <span>Add files...</span>
-                <!-- The file input field used as target for the file upload widget -->
-                <input id="fileupload" type="file" name="files[]" multiple>
-              </span>
-            </div>
-            <button class='btn btn-medium pull-right' id="submitToServer" onClick="BuildForm.submit()">Submit</button>
-          </section>
-          <div id="results"></div>
-				</dd>
-				<dt>4. Wait and see</dt>
-				<dd>Number of Features received: <span class="badge" id='numFeat'>0</span></dd>
-			</dl>
+        <div class="brand">
+          FME Server <span class="hidden-tiny">Demos</span>
         </div>
-        <div class="span8">
-			<div id="map_canvas"></div>
+
+        <div class="nav-collapse collapse">
+          <a class="btn" href="https://github.com/safesoftware/fmepedia-validation"><img alt=
+          "GitHub link" src="libs/github.png"> Fork GitHub</a> <a class="btn" href=
+          "https://github.com/safesoftware/fmepedia-validation/archive/master.zip"><i class=
+          "icon-download-alt"></i> Download Zip</a>
+        </div><span class="hidden-phone" id="safe-ribbon"><a href="http://www.safe.com">Powered by
+        FME</a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h1>Real-time Display <small>Upload CAD data and watch it appear in real-time</small></h1>
+      </div>
+    </div>
+    <br/>
+    
+    <!-- Content -->
+    
+    <div class="row">
+      <div id="actions-carousel" class="carousel slide span4">
+        
+        <div class="carousel-inner">
+          <div class="item active">
+            <h4>Step 1</h4>
+            <h3>Download example data</h3>
+            <p><a href='download/distribution_N25_good.dwg' target="_blank" class="step-1-download">
+              <i class="icon-download-alt"></i> distribution_N25_good.dwg
+            </a></p>
+            <p><a href='download/distribution_N25_bad.dwg' target="_blank" class="step-1-download">
+              <i class="icon-download-alt"></i> distribution_N25_bad.dwg
+            </a></p>
+            <p><button class="btn btn-default click-next-step">Next step</button></p>
+          </div>
+          <div class="item">
+            <h4>Step 2</h4>
+            <h3>Email file to FMEServer</h3>
+            <p><span class="label label-important" id="dbstatus">Database not ready</span></p>
+            <script type="text/javascript">   
+              document.write('<p><a href="mailto:cadqa@' + fmeserverurl +'" target="_blank"> cadqa@' + fmeserverurl +'<\/a>');
+            </script>
+            <p><button class="btn btn-default click-next-step">Next step</button></p>
+          </div>
+          <div class="item">
+            <h4>Step 3</h4>
+            <h3>Wait for results</h3>
+            <div id="results"></div>
+            <p>Number of Features received: <span class="badge" id='numFeat'>0</span></p>
+            <button class="btn btn-danger click-next-step click-demo-reset">Reset</button>
+          </div>
         </div>
       </div>
-	</div>
+      <div id="map_canvas" class="span8"></div>
+    </div>
+  </div>
 </body>
-
 </html>
