@@ -1,19 +1,23 @@
+if (location.protocol != 'https:')  {
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}
+
 //Do this as soon as the DOM is ready
 $(document).ready(function() {
 
-  $.getJSON("http://demos.fmeserver.com.s3.amazonaws.com/server-demo-config.json", function(config) {
+  $.getJSON("https://demos.fmeserver.com/server-demo-config.json", function(config) {
     initializeMap();
     initialize(config);
   });
-	
+
 });
 
 var initialize = function (config) {
-    
+
     /* page setup and function binding */
     $('#actions-carousel').carousel()
         .carousel('pause');
-    
+
     $('.click-next-step').click(function() {
         $('#actions-carousel').carousel('next');
     });
@@ -21,15 +25,15 @@ var initialize = function (config) {
         deleteDb();
         if (polygonArray) {
             for (i in polygonArray) {
-                polygonArray[i].setMap(null); 
+                polygonArray[i].setMap(null);
             }
         }
         features = 0;
         document.getElementById('numFeat').textContent = features;
     });
-        
+
     /*backend calls - prep*/
-    
+
     FMEServer.init(config.initObject);
     deleteDb();
 
@@ -142,14 +146,14 @@ function initializeMap() {
 
 // Wait for load
 
-  
+
 
 
 // This function calls the workspace to reset the database
 function deleteDb() {
   document.getElementById('dbstatus').setAttribute("class","label label-warning");
   document.getElementById('dbstatus').textContent = "Waiting for answer...";
-  
+
   // Object required for submitSyncJob method
   // For this case we are using server default values, but we still need to
   // pass an empty object to the method.
